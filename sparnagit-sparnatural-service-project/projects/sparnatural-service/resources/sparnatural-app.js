@@ -6,7 +6,7 @@
   'use strict';
 
   const CS = window.CmemSparnatural;
-  const VERSION = 'v14.1.0-1-2-g3aefb87-dirty';
+  const VERSION = 'v14.1.0-2';
   const UI_LANGS = ['en', 'fr']; // languages of Sparnatural's own interface
   const $ = (id) => document.getElementById(id);
 
