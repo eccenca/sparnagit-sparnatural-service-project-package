@@ -1,0 +1,103 @@
+{
+  "$schema": "https://eccenca.market/api/manifest",
+  "package_id": "sparnagit-sparnatural-service-project",
+  "package_version": "0.0.0",
+  "metadata": {
+    "name": "Sparnatural Query Builder",
+    "description": "Visual query builder for domain users, configured automatically from your data and shapes",
+    "license": "Apache-2.0",
+    "comment": null,
+    "agents": [
+      {
+        "agent_role": "publisher",
+        "agent_name": "eccenca GmbH",
+        "agent_url": "https://eccenca.com/",
+        "agent_email": null,
+        "agent_type": "organization"
+      },
+      {
+        "agent_role": "author",
+        "agent_name": "Thomas Francart",
+        "agent_url": "https://github.com/tfrancart",
+        "agent_email": null,
+        "agent_type": "person"
+      },
+      {
+        "agent_role": "author",
+        "agent_name": "Tarek Bouzelat",
+        "agent_url": "https://github.com/BouzelatTarek",
+        "agent_email": null,
+        "agent_type": "person"
+      }
+    ],
+    "urls": [
+      {
+        "url_ref": "https://sparnatural.eu",
+        "url_role": "homepage"
+      },
+      {
+        "url_ref": "https://github.com/sparna-git/Sparnatural",
+        "url_role": "source"
+      }
+    ],
+    "tags": [
+      "query",
+      "search",
+      "sparnatural",
+      "visualization",
+      "service"
+    ],
+    "languages": [
+      "en"
+    ]
+  },
+  "files": [
+    {
+      "file_path": "mp-1.png",
+      "file_type": "image",
+      "file_role": "marketplace"
+    },
+    {
+      "file_path": "mp-2.png",
+      "file_type": "image",
+      "file_role": "marketplace"
+    },
+    {
+      "file_path": "mp-3.png",
+      "file_type": "image",
+      "file_role": "marketplace"
+    },
+    {
+      "file_path": "icon.png",
+      "file_type": "image",
+      "file_role": "icon"
+    },
+    {
+      "file_path": "projects/sparnatural-service.zip",
+      "file_type": "project",
+      "project_id": "sparnatural-service"
+    },
+    {
+      "file_type": "view",
+      "file_path": "views/sparnatural.json",
+      "view_id": "sparnatural"
+    },
+    {
+      "file_path": "CHANGELOG.md",
+      "file_type": "text",
+      "file_role": "changelog"
+    },
+    {
+      "file_path": "README.md",
+      "file_type": "text",
+      "file_role": "readme"
+    },
+    {
+      "file_path": "LICENSE",
+      "file_type": "text",
+      "file_role": "license"
+    }
+  ],
+  "package_type": "project",
+  "dependencies": []
+}

@@ -1,0 +1,42 @@
+---
+version: '3'
+
+tasks:
+
+  default:
+    desc: Show help (default task)
+    cmds:
+      - task --list-all
+
+  test:
+    desc: Run the unit tests (needs node >= 20)
+    cmds:
+      - node --test 'test/*.test.js'
+
+  vendor:
+    desc: Download the pinned third-party files into vendor/
+    cmds:
+      - bash scripts/vendor.sh
+
+  build-html:
+    desc: Stamp the page with Git revision metadata and collect the served files in dist/
+    cmds:
+      - bash scripts/embed-build-metadata.sh
+
+  build-project:
+    desc: Copy the built artifacts into the project directory of the package
+    deps: [build-html]
+    # config.xml, tags.xml and variables.xml are committed content; only resources/ and the
+    # version in the project label are generated here.
+    cmds:
+      - rm -rf {{.PROJECT_DIR}}/resources
+      - mkdir -p {{.PROJECT_DIR}}/resources
+      - cp -R dist/. {{.PROJECT_DIR}}/resources/
+      - >
+        sed -E "s|(<Label>Sparnatural Service).*(</Label>)|\1 {{.VERSION}}\2|"
+        {{.PROJECT_DIR}}/config.xml > {{.PROJECT_DIR}}/config.xml.tmp
+      - mv {{.PROJECT_DIR}}/config.xml.tmp {{.PROJECT_DIR}}/config.xml
+    vars:
+      PROJECT_DIR: ./../sparnagit-sparnatural-service-project/projects/sparnatural-service
+      VERSION:
+        sh: git describe --always --dirty 2>/dev/null || echo unknown

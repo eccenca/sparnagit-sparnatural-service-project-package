@@ -1,0 +1,102 @@
+# https://taskfile.dev
+#
+# This is a generated file. We dot not suggest to edit it.
+# Instead, create a file `TaskfileCustom.yml` and add your additions there.
+---
+version: '3'
+
+dotenv: ['.copier-answers.env', '.env']
+
+vars:
+  PACKAGE_DIR: $package_dir
+  PACKAGE_ID: $package_id
+  DIST_DIR: dist
+  GIT_DESCRIBE:
+    sh: git describe --always --dirty 2>/dev/null || echo ""
+  PACKAGE_VERSION:
+    sh: echo {{if regexMatch "^v.*" .GIT_DESCRIBE}}{{.GIT_DESCRIBE}}{{else}}v0.0.0-{{.GIT_DESCRIBE}}{{end}}
+
+includes:
+  custom:
+    taskfile: ./TaskfileCustom.yaml
+    optional: true
+    flatten: true
+
+tasks:
+
+  default:
+    summary: |
+      Just a list of documented tasks
+    silent: true
+    cmds:
+      - task --list
+
+  clean:
+    desc: Removes dist, *.cpa, ...
+    cmds:
+      - rm -rf {{.DIST_DIR}}
+
+  check:prepare:
+    internal: true
+    summary: |
+      prepare check targets by creating appropriate directory
+    run: once
+    cmds:
+      - mkdir -p {{.DIST_DIR}}
+
+  check:
+    desc: Run whole test suite
+    deps:
+      - build
+    cmds:
+      - cmemc package install --replace --input {{.DIST_DIR}}/{{.PACKAGE_ID}}-{{.PACKAGE_VERSION}}.cpa
+      - cmemc package uninstall {{.PACKAGE_ID}}
+
+  build:
+    desc: Build package archive
+    preconditions:
+      - sh: git describe --always --dirty 2>/dev/null
+        msg: "Package directory must be a git repository. Run: git init; git add .; git commit -m 'init'"
+    deps:
+      - clean
+      - check:prepare
+      - build-project
+    cmds:
+      - >
+        cmemc package build {{.PACKAGE_DIR}}
+        --output-dir {{.DIST_DIR}}
+        --version {{.PACKAGE_VERSION}}
+
+  build-project:
+    desc: Build the sparnatural-service project (stamp and copy the service page)
+    cmds:
+      - cd src ; task build-project ; cd -
+
+  test:
+    desc: Run the unit tests (needs node >= 20)
+    cmds:
+      - cd src ; task test ; cd -
+
+  import:
+    desc: Import (install) package to Corporate Memory
+    deps:
+      - delete
+    cmds:
+      - cmemc package install --input {{.PACKAGE_DIR}}
+
+  export:
+    desc: Export package content from Corporate Memory
+    cmds:
+      - cmemc package export --replace --extract {{.PACKAGE_ID}}
+
+  delete:
+    desc: Delete (uninstall) package from Corporate Memory
+    cmds:
+      - cmd: cmemc package uninstall {{.PACKAGE_ID}}
+        ignore_error: true
+
+  publish:
+    desc: Publish package archive to the marketplace
+    cmds:
+      - cmemc package publish dist/{{.PACKAGE_ID}}-{{.PACKAGE_VERSION}}.cpa
+

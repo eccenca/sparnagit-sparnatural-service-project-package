@@ -1,0 +1,243 @@
+/*
+ * Sparnatural in the look of eccenca Corporate Memory. Loaded after sparnatural.css.
+ * The --eccgui-* tokens are copied from the CMEM page at load (lib/theme.js); the hex values are the
+ * CMEM defaults, used when the page runs on its own.
+ */
+.Sparnatural,
+.SparnaturalForm,
+.select2-container--default,
+.tippy-box {
+  --primary-color-main: var(--eccgui-color-primary, #f29100);
+  --primary-color-important: var(--eccgui-color-palette-layout-amber-900, #c77400);
+  --primary-color-medium: var(--eccgui-color-palette-identity-brand-500, #f6b966);
+  --primary-color-light: var(--eccgui-color-primary-contrast, #fbead9);
+  --secondary-color-main: var(--eccgui-color-accent, #0a6199);
+  --secondary-color-important: var(--eccgui-color-palette-layout-petrol-900, #0c5678);
+  --secondary-color-light: var(--eccgui-color-palette-identity-accent-500, #77abca);
+  --ternary-color-main: var(--eccgui-color-palette-layout-petrol-700, #437c97);
+  --ternary-color-light: var(--eccgui-color-accent-contrast, #e5f4fb);
+  --silver-color-main: var(--eccgui-color-palette-extra-silver-900, #a8a8a8);
+  --silver-color-light: var(--eccgui-color-palette-extra-silver-300, #dedede);
+  --default-text-color: var(--eccgui-color-palette-identity-text-900, #090909);
+  --default-text-color-light: #ffffff;
+  --focus-color: var(--eccgui-a11y-outline-color, #8c1656);
+  --bg-red: 10;
+  --bg-green: 97;
+  --bg-blue: 153;
+}
+
+html, body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: var(--eccgui-size-typo-text, 14px);
+  color: var(--eccgui-color-palette-identity-text-900, #090909);
+  background: #ffffff;
+}
+
+.Sparnatural, .yasr {
+  font-family: Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+/* page header: graph, configuration status, rebuild */
+.cmem-sn-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  padding: 7px 14px;
+  border-bottom: 1px solid var(--eccgui-color-palette-extra-silver-300, #dedede);
+  background: #ffffff;
+}
+.cmem-sn-header label { font-weight: 600; }
+.cmem-sn-header select {
+  min-width: 18em;
+  max-width: 40em;
+  height: 32px;
+  padding: 0 10px;
+  border: 1px solid var(--eccgui-color-palette-extra-silver-900, #a8a8a8);
+  border-radius: 16px;
+  background: #ffffff;
+  font: inherit;
+}
+.cmem-sn-graph { font-weight: 600; }
+.cmem-sn-status { color: var(--eccgui-color-palette-identity-text-500, #818181); }
+.cmem-sn-spacer { flex: 1; }
+.cmem-sn-header button {
+  height: 32px;
+  padding: 0 14px;
+  border: 1px solid var(--eccgui-color-accent, #0a6199);
+  border-radius: 16px;
+  background: #ffffff;
+  color: var(--eccgui-color-accent, #0a6199);
+  font: inherit;
+  cursor: pointer;
+}
+.cmem-sn-header button:hover { background: var(--eccgui-color-accent-contrast, #e5f4fb); }
+.cmem-sn-header button:disabled { opacity: 0.39; cursor: default; }
+
+
+.cmem-sn-message {
+  margin: 14px;
+  padding: 10px 14px;
+  border-left: 4px solid var(--eccgui-color-accent, #0a6199);
+  background: var(--eccgui-color-accent-contrast, #e5f4fb);
+}
+.cmem-sn-message.error {
+  border-left-color: #b71c1c;
+  background: #fff5f6;
+}
+.cmem-sn-progress::before {
+  content: "";
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin-right: 8px;
+  border: 2px solid var(--eccgui-color-accent, #0a6199);
+  border-right-color: transparent;
+  border-radius: 50%;
+  animation: cmem-sn-spin 0.8s linear infinite;
+}
+@keyframes cmem-sn-spin { to { transform: rotate(360deg); } }
+
+/* graph picker: button + panel with search and an owl:imports tree (monospace tree lines align exactly) */
+.cmem-sn-picker { position: relative; display: inline-block; }
+#graph-button {
+  min-width: 18em;
+  max-width: 40em;
+  height: 32px;
+  padding: 0 28px 0 10px;
+  border: 1px solid var(--eccgui-color-palette-extra-silver-900, #a8a8a8);
+  border-radius: 16px;
+  background: #ffffff;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  cursor: pointer;
+  position: relative;
+}
+#graph-button::after { content: "▾"; position: absolute; right: 10px; top: 50%; transform: translateY(-50%); }
+#graph-button:hover { background: #ffffff; border-color: var(--eccgui-color-accent, #0a6199); }
+.cmem-sn-picker-panel {
+  position: absolute;
+  z-index: 1000;
+  top: 36px;
+  left: 0;
+  width: max(28em, 100%);
+  max-width: 90vw;
+  background: #ffffff;
+  border: 1px solid var(--eccgui-color-palette-extra-silver-300, #dedede);
+  border-radius: 6px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
+  padding: 6px;
+}
+.cmem-sn-picker-panel[hidden] { display: none; }
+#graph-filter {
+  box-sizing: border-box;
+  width: 100%;
+  height: 30px;
+  padding: 0 10px;
+  border: 1px solid var(--eccgui-color-palette-extra-silver-900, #a8a8a8);
+  border-radius: 15px;
+  font: inherit;
+  margin-bottom: 4px;
+}
+#graph-filter:focus { outline: 2px solid var(--eccgui-color-accent, #0a6199); outline-offset: -1px; }
+#graph-list { list-style: none; margin: 0; padding: 0; max-height: 60vh; overflow: auto; }
+#graph-list li {
+  display: flex;
+  align-items: baseline;
+  padding: 2px 8px;
+  border-radius: 4px;
+  white-space: nowrap;
+  cursor: pointer;
+}
+#graph-list li .tree {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  white-space: pre;
+  color: var(--eccgui-color-palette-identity-text-500, #818181);
+}
+#graph-list li[aria-selected="true"] { font-weight: 600; }
+#graph-list li.active { background: var(--eccgui-color-accent-contrast, #e5f4fb); }
+#graph-list li.separator, #graph-list li.empty {
+  cursor: default;
+  margin-top: 4px;
+  padding-top: 4px;
+  border-top: 1px solid var(--eccgui-color-palette-extra-silver-300, #dedede);
+  color: var(--eccgui-color-palette-identity-text-500, #818181);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+#graph-list li.empty { border-top: 0; text-transform: none; letter-spacing: 0; }
+
+/* class icons from foaf:depiction (image URLs): the per-class background-image comes from config.depictionCss */
+.fa-cmem-dep::before {
+  content: "";
+  display: inline-block;
+  width: 1.15em;
+  height: 1.15em;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  vertical-align: -0.2em;
+}
+
+/* results */
+#yasqe { margin: 0 14px 14px; }
+#yasr { margin: 0 14px 14px; }
+.yasr a.iri, .yasr a { color: var(--eccgui-color-accent, #0a6199); }
+.cmem-sn-links { margin-left: 6px; white-space: nowrap; }
+.cmem-sn-link {
+  display: inline-block;
+  margin-left: 4px;
+  padding: 0 6px;
+  border: 1px solid var(--eccgui-color-palette-identity-accent-500, #77abca);
+  border-radius: 8px;
+  font-size: 12px;
+  line-height: 16px;
+  color: var(--eccgui-color-accent, #0a6199) !important;
+  text-decoration: none;
+}
+.cmem-sn-link:hover { background: var(--eccgui-color-accent-contrast, #e5f4fb); }
+
+/* ---- compact layout: Sparnatural's margins and paddings at about 35-40% ----------------------------------------
+ * Row heights (48px, set by the arrow graphics) and the room for the value widget below an unfinished row stay;
+ * the "Where"/"And" bubbles get smaller so they fit the smaller gaps. Prefixed with spar-natural
+ * to win over sparnatural.css. */
+spar-natural section { padding-top: 10px; }
+spar-natural .builder-section { padding: 0 12px; }
+spar-natural .builder-section .reset-wrapper { left: 12px; }
+spar-natural .builder-section .reset-wrapper > .reset-form { margin-top: 12px; margin-bottom: 12px; }
+
+spar-natural .CriteriaGroup { margin-top: 12px; } /* margin-bottom of unfinished rows (room for the value widget) stays as in sparnatural.css */
+spar-natural li.groupe.completed > .CriteriaGroup { margin-bottom: 12px; }
+
+/* "Where" / "And" bubbles: smaller, so they fit the smaller gaps */
+spar-natural .link-and-bottom span,
+spar-natural .link-where-bottom .horizontal span,
+spar-natural .ActionsGroup .ActionAnd a { height: 22px; line-height: 16px; padding: 1px 8px; }
+
+spar-natural .CriteriaGroup .currentWrapper span.current { padding: 0 8px; }
+spar-natural .ObjectPropertyGroup .currentWrapper span.current.temporary-label { padding-left: 8px; padding-right: 8px; }
+
+/* The (invisible, 46px high) actions area below a row now reaches into the next row: let clicks pass through it
+ * (except on its own buttons) and keep the remove buttons (x) on top. */
+spar-natural .ActionsGroup { pointer-events: none; }
+spar-natural .ActionsGroup a, spar-natural .ActionsGroup .ActionAnd, spar-natural .ActionsGroup .ActionAnd * { pointer-events: auto; }
+spar-natural span.unselect, spar-natural .EndClassWidgetGroup div.edit { z-index: 10; }
+
+/* variables (result columns) section */
+spar-natural .variablesSelection { margin-bottom: 8px; }
+spar-natural .variablesSelection .line1 { margin-top: 14px; }
+spar-natural .variablesSelection .line2 { min-height: 40px; margin-bottom: 14px; }
+spar-natural .variablesSelection .line2 .sortableItem { padding: 4px; }
+spar-natural .submitSection a { padding: 4px; padding-left: 6px; }
+
+/* page chrome */
+.cmem-sn-header { padding: 4px 10px; gap: 8px; }
+.cmem-sn-main { padding: 4px 6px; }
+#yasqe, #yasr { margin: 0 6px 6px; }
+.cmem-sn-message { margin: 6px; padding: 6px 10px; }

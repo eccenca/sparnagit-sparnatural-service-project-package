@@ -1,0 +1,722 @@
+[
+  {
+    "id": "sparnatural",
+    "labels": [
+      {
+        "value": "Search",
+        "lang": "en"
+      },
+      {
+        "value": "Suche",
+        "lang": "de"
+      },
+      {
+        "value": "Recherche",
+        "lang": "fr"
+      }
+    ],
+    "enableCompanion": true,
+    "enableGraphInsights": true,
+    "apiConfiguration": {
+      "defaultTimeout": 60000,
+      "conciseBoundLoadAlgorithm": "QUERY"
+    },
+    "appPresentationConfiguration": {},
+    "comments": [
+      {
+        "value": "Visual query builder for domain users: find resources by their types, properties and relations, without SPARQL.",
+        "lang": "en"
+      },
+      {
+        "value": "Visueller Abfrage-Editor f\u00fcr Fachanwender: Ressourcen \u00fcber Typen, Eigenschaften und Beziehungen finden, ohne SPARQL.",
+        "lang": "de"
+      },
+      {
+        "value": "\u00c9diteur visuel de requ\u00eates pour les utilisateurs m\u00e9tier : trouver des ressources par leurs types, propri\u00e9t\u00e9s et relations, sans SPARQL.",
+        "lang": "fr"
+      }
+    ],
+    "companionAdditionalPrompt": "",
+    "companionAllowedToolPattern": [
+      "*"
+    ],
+    "diWorkspaceConfiguration": {
+      "enabled": true,
+      "baseUrl": "/dataintegration/"
+    },
+    "featureFlagConfig": "",
+    "featureFlags": "",
+    "modules": {
+      "exploreModuleConfiguration": {
+        "order": 1,
+        "iri": "https://ns.eccenca.com/data/config/DefaultExploreConfiguration",
+        "enabled": true,
+        "exploreGraphLists": [
+          {
+            "iri": "https://ns.eccenca.com/data/config/FavoriteGraphList",
+            "labels": [
+              {
+                "value": "\u2605",
+                "lang": "en"
+              },
+              {
+                "value": "\u2605",
+                "lang": "de"
+              },
+              {
+                "value": "\u2605",
+                "lang": "fr"
+              }
+            ],
+            "comments": [
+              {
+                "value": "List of favorite graphs",
+                "lang": "en"
+              },
+              {
+                "value": "Liste der Favoriten",
+                "lang": "de"
+              },
+              {
+                "value": "Liste des favoris",
+                "lang": "fr"
+              }
+            ],
+            "query": "PREFIX shui: <https://vocab.eccenca.com/shui/> SELECT DISTINCT ?graph WHERE { { GRAPH ?graph { ?graph shui:isFavorite true . } } MINUS { GRAPH ?graph { ?graph shui:isSystemResource true . } } }",
+            "order": 5,
+            "hideIfEmpty": true
+          },
+          {
+            "iri": "https://ns.eccenca.com/data/config/UserGraphList",
+            "labels": [
+              {
+                "value": "User",
+                "lang": "en"
+              },
+              {
+                "value": "Nutzer",
+                "lang": "de"
+              },
+              {
+                "value": "Utilisateur)",
+                "lang": "fr"
+              }
+            ],
+            "comments": [
+              {
+                "value": "List of all user graphs",
+                "lang": "en"
+              },
+              {
+                "value": "Liste alle Nutzer-Daten Graphen.",
+                "lang": "de"
+              },
+              {
+                "value": "Liste de tous les graphes des utilisateurs",
+                "lang": "fr"
+              }
+            ],
+            "query": "PREFIX owl: <http://www.w3.org/2002/07/owl#> PREFIX void: <http://rdfs.org/ns/void#> PREFIX di: <https://vocab.eccenca.com/di/> PREFIX shui: <https://vocab.eccenca.com/shui/> PREFIX eccdsm: <https://vocab.eccenca.com/dsm/> SELECT DISTINCT ?graph WHERE {   {     GRAPH ?graph { ?graph a void:Dataset . }   } UNION {     GRAPH ?graph { ?graph a di:Dataset . }   } UNION {     GRAPH ?graph { ?graph a eccdsm:ThesaurusProject . }   } UNION {     GRAPH ?graph { ?graph a shui:IntegrationGraph . }   } MINUS {     GRAPH ?graph { ?graph shui:isSystemResource true . }   } }",
+            "order": 10,
+            "hideIfEmpty": true
+          },
+          {
+            "iri": "https://ns.eccenca.com/data/config/SystemGraphList",
+            "labels": [
+              {
+                "value": "System",
+                "lang": "en"
+              },
+              {
+                "value": "System",
+                "lang": "de"
+              },
+              {
+                "value": "Syst\u00e8me",
+                "lang": "fr"
+              }
+            ],
+            "comments": [
+              {
+                "value": "System graphs includes configuration, shape and system catalog graphs.",
+                "lang": "en"
+              },
+              {
+                "value": "System Graphen beinhalten Konfig-, Shape-, und System-Katalog Graphen.",
+                "lang": "de"
+              },
+              {
+                "value": "Les graphes utilis\u00e9s par le syst\u00e8me incluent les graphes de configuration, des sch\u00e9mas et du catalogue syst\u00e8me.",
+                "lang": "fr"
+              }
+            ],
+            "query": "PREFIX owl: <http://www.w3.org/2002/07/owl#>\nPREFIX shui: <https://vocab.eccenca.com/shui/>\nPREFIX di: <https://vocab.eccenca.com/di/>\nSELECT DISTINCT ?graph WHERE {\n  { GRAPH ?graph { ?graph shui:isSystemResource true . } }\n  UNION\n  { GRAPH ?graph { ?graph a shui:ShapeCatalog . } }\n  UNION\n  { GRAPH ?graph { ?graph a shui:QueryCatalog . } }\n}",
+            "order": 30,
+            "hideIfEmpty": true
+          },
+          {
+            "iri": "https://ns.eccenca.com/data/config/VocabularyGraphList",
+            "labels": [
+              {
+                "value": "Vocabularies",
+                "lang": "en"
+              },
+              {
+                "value": "Vokabulare",
+                "lang": "de"
+              },
+              {
+                "value": "Vocabulaires",
+                "lang": "fr"
+              }
+            ],
+            "comments": [
+              {
+                "value": "List of all vocabulary graphs",
+                "lang": "en"
+              },
+              {
+                "value": "Liste aller Ontologien / Vokabular Graphen.",
+                "lang": "de"
+              },
+              {
+                "value": "Liste de tous les graphes des vocabulaires",
+                "lang": "fr"
+              }
+            ],
+            "query": "SELECT DISTINCT ?graph WHERE {\n  GRAPH ?graph { ?graph a ?type .\n  FILTER NOT EXISTS {?graph <https://vocab.eccenca.com/shui/isSystemResource> true.}\n  VALUES ?type { <http://www.w3.org/2002/07/owl#Ontology> }\n  }\n}",
+            "order": 20,
+            "hideIfEmpty": true
+          },
+          {
+            "iri": "https://ns.eccenca.com/data/config/AllGraphList",
+            "labels": [
+              {
+                "value": "All",
+                "lang": "en"
+              },
+              {
+                "value": "Alle",
+                "lang": "de"
+              },
+              {
+                "value": "Tout",
+                "lang": "fr"
+              }
+            ],
+            "comments": [
+              {
+                "value": "Unfiltered list of all graphs.",
+                "lang": "en"
+              },
+              {
+                "value": "Ungefilterte Liste aller Graphen.",
+                "lang": "de"
+              },
+              {
+                "value": "Liste de tous les graphes sans filtre.",
+                "lang": "fr"
+              }
+            ],
+            "order": 40,
+            "hideIfEmpty": false
+          }
+        ],
+        "graphCreationShapes": [
+          "https://vocab.eccenca.com/shacl/NewIntegrationGraph",
+          "https://vocab.eccenca.com/shacl/NewKnowledgeGraph",
+          "https://vocab.eccenca.com/shacl/NewOwlOntology",
+          "https://vocab.eccenca.com/shacl/NewShapeCatalog",
+          "https://vocab.eccenca.com/shacl/NewQueryCatalog",
+          "https://vocab.eccenca.com/shacl/NewVersioningGraph",
+          "https://vocab.eccenca.com/shacl/NewStatementAnnotationGraph"
+        ],
+        "shaclAllowCopy": true,
+        "shaclShowGraphInfo": true,
+        "shaclUseSaveApi": false,
+        "shaclShowMetadataTab": false,
+        "enableFullShaclValidationInEditModes": false,
+        "navigationItemsPerPage": 15,
+        "navigationTopQuery": "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX owl: <http://www.w3.org/2002/07/owl#>\nPREFIX shui: <https://vocab.eccenca.com/shui/>\nSELECT DISTINCT ?resource ?hasChildren\n{{FROM}}\nWHERE {\n  {\n    { SELECT DISTINCT ?resource { [] a ?resource . } }\n    FILTER NOT EXISTS { ?resource rdfs:subClassOf [] }\n  } UNION {\n    ?resource a owl:Class .\n    FILTER NOT EXISTS { ?resource rdfs:subClassOf [] }\n  } UNION {\n    ?resource a rdfs:Class .\n    FILTER NOT EXISTS { ?resource rdfs:subClassOf [] }\n  } UNION {\n    ?graph shui:managedClasses ?resource .\n    FILTER NOT EXISTS { [] owl:imports ?graph }\n  }\n  FILTER(isIRI(?resource))\n  BIND( IF( EXISTS{ [] rdfs:subClassOf ?resource }, \"hasChildren\", \"noChildren\") as ?hasChildren )\n} ORDER BY ?resource\n",
+        "navigationSubQuery": "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n      PREFIX owl: <http://www.w3.org/2002/07/owl#>\n\n      SELECT ?resource ?hasChildren\n      {{FROM}}\n      WHERE {\n        ?resource rdfs:subClassOf {{RESOURCE}} .\n        FILTER(isIRI(?resource)) .\n        BIND(IF(EXISTS{ [] rdfs:subClassOf ?resource . }, \"hasChildren\", \"noChildren\") AS ?hasChildren)\n      }\n",
+        "navigationSearchQuery": "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX owl: <http://www.w3.org/2002/07/owl#>\nPREFIX shui: <https://vocab.eccenca.com/shui/>\nPREFIX skos: <http://www.w3.org/2004/02/skos/core#>\n\nSELECT DISTINCT ?resource ?hasChildren\n{{FROM}}\nWHERE {\n  {\n    ?resource rdfs:subClassOf [] .\n  } UNION {\n    { SELECT DISTINCT ?resource { [] a ?resource . } }\n  } UNION {\n    ?resource a owl:Class .\n  } UNION {\n    ?resource a rdfs:Class .\n  } UNION { \n    ?graph shui:managedClasses  ?resource . \n    FILTER NOT EXISTS { [] owl:imports ?graph }\n  }\n\n  FILTER(isIRI(?resource)) .\n\n  OPTIONAL { ?resource rdfs:label ?label1 . }\n  OPTIONAL { ?resource skos:prefLabel ?label2 . }\n\n  BIND( IF( EXISTS { [] rdfs:subClassOf ?resource }, \"hasChildren\", \"noChildren\") as ?hasChildren )\n\n  FILTER(\n    regex(str(?resource),\"\"\"{{QUERY}}\"\"\",\"i\") ||\n    regex(str(?label1),\"\"\"{{QUERY}}\"\"\",\"i\") ||\n    regex(str(?label2),\"\"\"{{QUERY}}\"\"\",\"i\")\n  )\n\n}",
+        "navigationListQuery": "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n      SELECT ?instance\n      {{FROM}}\n      WHERE {\n        {\n          ?instance a {{RESOURCE}} .\n          FILTER isIRI(?instance) .\n        } UNION {\n          ?class rdfs:subClassOf+ {{RESOURCE}} .\n          ?instance a ?class .\n          FILTER isIRI(?instance).\n        }\n      }\n",
+        "navigationOverallSearchQuery": "SELECT ?resource\n    {{FROM}}\n    WHERE {\n      ?resource ?p0 ?label.\n      FILTER (!isBLANK(?resource)).\n      FILTER (contains (lcase(str(?label)), lcase(\"\"\"{{QUERY}}\"\"\"))).\n    }\n",
+        "propertiesEnabled": true,
+        "usageEnabled": true,
+        "referencesEnabled": true,
+        "turtleEnabled": true,
+        "ontodiaEnabled": true,
+        "ontodiaEnabledDeprecated": true,
+        "statisticsEnabled": true,
+        "statisticsSunburstEnabled": true,
+        "visualizationEnabled": true,
+        "externalTools": [],
+        "id": "explore"
+      },
+      "bkeModuleConfiguration": {
+        "order": 2,
+        "iri": "https://ns.eccenca.com/data/config/DefaultBkeConfiguration",
+        "enabled": true,
+        "shapePropertyView": true,
+        "searchListQueries": [
+          {
+            "graphResourcePattern": {
+              "pathFilters": [
+                {
+                  "varname": "class",
+                  "varIsAnyOneOfResource": [],
+                  "varIsAnyOneOfLiteral": [],
+                  "isNoneOfResource": [
+                    "http://www.w3.org/2002/07/owl#Class",
+                    "http://www.w3.org/2000/01/rdf-schema#Class"
+                  ],
+                  "isNoneOfLiteral": [],
+                  "literalFilters": []
+                }
+              ],
+              "paths": [
+                {
+                  "subjectVarName": "resource",
+                  "hideSubjectVar": false,
+                  "objectVarName": "class",
+                  "hideObjectVar": false,
+                  "inverted": false,
+                  "zeroOrMore": false,
+                  "oneOrMore": false,
+                  "zeroOrOne": false,
+                  "objectPath": true,
+                  "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                  "sequence": [],
+                  "alternative": [],
+                  "propertyPath": []
+                }
+              ]
+            },
+            "labels": [
+              {
+                "value": "Instances"
+              }
+            ]
+          },
+          {
+            "graphResourcePattern": {
+              "pathFilters": [
+                {
+                  "varname": "classType",
+                  "varIsAnyOneOfResource": [
+                    "http://www.w3.org/2002/07/owl#Class",
+                    "http://www.w3.org/2000/01/rdf-schema#Class"
+                  ],
+                  "varIsAnyOneOfLiteral": [],
+                  "isNoneOfResource": [],
+                  "isNoneOfLiteral": [],
+                  "literalFilters": []
+                }
+              ],
+              "paths": [
+                {
+                  "subjectVarName": "resource",
+                  "hideSubjectVar": false,
+                  "objectVarName": "classType",
+                  "hideObjectVar": false,
+                  "inverted": false,
+                  "zeroOrMore": false,
+                  "oneOrMore": false,
+                  "zeroOrOne": false,
+                  "objectPath": true,
+                  "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                  "sequence": [],
+                  "alternative": [],
+                  "propertyPath": []
+                }
+              ]
+            },
+            "labels": [
+              {
+                "value": "Classes"
+              }
+            ]
+          }
+        ],
+        "id": "bke"
+      },
+      "accountSettingsModuleConfiguration": {
+        "order": 3,
+        "enabled": true,
+        "url": "/auth/realms/cmem/account/?referrer={{REFERRER}}&referrer_uri={{REFERRER_URI}}#/personal-info",
+        "id": "account_settings"
+      },
+      "administrationModuleConfiguration": {
+        "order": 4,
+        "enabled": true,
+        "id": "administration"
+      },
+      "accessControlModuleConfiguration": {
+        "order": 3,
+        "enabled": true,
+        "id": "access-control"
+      },
+      "annotationModuleConfiguration": {
+        "order": 5,
+        "enabled": false,
+        "id": "annotation"
+      },
+      "integrationsModuleConfiguration": {
+        "order": -10,
+        "enabled": true,
+        "name": "Search",
+        "tabs": [
+          {
+            "name": "Search",
+            "url": "/dataintegration/workspace/projects/sparnatural-service/browse/sparnatural.html"
+          }
+        ],
+        "id": "integrations"
+      },
+      "linkRuleModuleConfiguration": {
+        "order": 9,
+        "enabled": false,
+        "hierarchyEnable": true,
+        "id": "link_rule"
+      },
+      "queryModuleConfiguration": {
+        "order": 10,
+        "enabled": false,
+        "id": "query"
+      },
+      "reportsModuleConfiguration": {
+        "order": 11,
+        "enabled": false,
+        "listQuery": "PREFIX eccc: <https://vocab.eccenca.com/controlling/>\nPREFIX xsd: <http://www.w3.org/2001/XMLSchema#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX s: <http://schema.org/>\nSELECT\n  ?worker\n  (SUM(?duration) AS ?totalDuration)\n  (SUM(?research) AS ?researchDuration)\n  (SUM(?customer) AS ?customerDuration)\n  (SUM(?absence) AS ?absenceDuration)\n  (COUNT(DISTINCT STR(?date)) AS ?days)\nFROM <https://timetracker.eccenca.com/records/>\nWHERE {\n  ?_resource a ?activity .\n  ?activity rdfs:subClassOf eccc:Activity .\n  ?_resource s:performer ?worker .\n  ?_resource s:startDate ?date .\n  ?_resource s:duration ?duration .\n  BIND(IF(?activity = eccc:ResearchActivity, ?duration, 0 ) AS ?research)\n  BIND(IF(?activity = eccc:CustomerProjectActivity, ?duration, 0 ) AS ?customer)\n  BIND(IF(?activity IN(\n    eccc:Illness, eccc:IllnessWithCertificate, eccc:ParentalLeave,\n    eccc:Vacation, eccc:VacationByLaw, eccc:VacationSpecial\n  ), ?duration, 0 ) AS ?absence)\n  FILTER ( ?date >= {{LOWER_DATE}}^^xsd:date )\n  FILTER ( ?date <= {{UPPER_DATE}}^^xsd:date )\n}\nGROUP BY ?worker\nORDER BY DESC(?days)\n",
+        "id": "reports"
+      },
+      "searchModuleConfiguration": {
+        "order": 12,
+        "enabled": false,
+        "solrUrl": "http://example.com.invalid/solr",
+        "id": "search"
+      },
+      "taskModuleConfiguration": {
+        "order": 12,
+        "enabled": false,
+        "id": "task"
+      },
+      "thesaurusModuleConfiguration": {
+        "order": 14,
+        "enabled": false,
+        "id": "thesaurus"
+      },
+      "trackingModuleConfiguration": {
+        "order": 15,
+        "enabled": false,
+        "listQuery": "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX xsd: <http://www.w3.org/2001/XMLSchema#>\nPREFIX eccc: <https://vocab.eccenca.com/controlling/>\nPREFIX s: <http://schema.org/>\nSELECT DISTINCT ?resource (?resource as ?edit) ?date ?duration ?activity ?projectOrOrganization\nFROM <https://timetracker.eccenca.com/>\nWHERE {\n  ?resource a ?activity .\n  ?activity rdfs:subClassOf eccc:Activity .\n  ?resource s:performer <https://ns.eccenca.com/{{shuiAccountName}}> .\n  ?resource s:startDate ?date .\n  ?resource s:duration ?duration .\n  OPTIONAL { ?resource s:superEvent ?project . }\n  OPTIONAL { ?resource eccc:relatedOrganization ?organization . }\n  BIND(COALESCE(?project, ?organization) AS ?projectOrOrganization).\n  FILTER (?date >= \"{{LOWER_DATE}}\"^^xsd:date)\n  FILTER (?date <= \"{{UPPER_DATE}}\"^^xsd:date)\n}\nORDER BY desc(?date)\n",
+        "dataGraph": "https://timetracker.eccenca.com/",
+        "activitiesQuery": "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX owl: <http://www.w3.org/2002/07/owl#>\nPREFIX eccc: <https://vocab.eccenca.com/controlling/>\nSELECT ?resource ?label WHERE {\n  ?resource a owl:Class .\n  ?resource rdfs:subClassOf eccc:Activity .\n  ?resource rdfs:label ?label .\n}\nORDER BY (?label)\n",
+        "id": "tracking"
+      },
+      "marketplaceModuleConfiguration": {
+        "order": 50,
+        "enabled": true,
+        "id": "marketplace"
+      },
+      "chartsModuleConfiguration": {
+        "order": 18,
+        "enabled": false,
+        "id": "charts"
+      },
+      "manageModuleConfiguration": {
+        "order": 850,
+        "enabled": true,
+        "id": "manage"
+      }
+    },
+    "navigationConfiguration": {
+      "topConceptQuery": "# Computes the root resources of the class hierarchy forest used for\n# the navigation list.\n#\n# ?resource: root of a tree in the forest\n#\n# Note: SELECT must be exactly ?resource.\n# No rebinding, aliases, or expressions allowed in the projection.\nSELECT DISTINCT ?resource\nWHERE {\n  {\n    {\n\n      # Get classes that are used as the type of a resource\n      SELECT DISTINCT ?resource\n      WHERE {\n        [] rdf:type ?resource .\n      }\n    }\n\n    # Exclude classes with a non-trivial superclass\n    FILTER NOT EXISTS {\n      ?resource rdfs:subClassOf ?parentClass .\n      FILTER (?parentClass != owl:Thing)\n    }\n  } UNION {\n\n    # Get all owl:Class and rdfs:Class resources\n    ?resource rdf:type ?classType .\n    VALUES ?classType { owl:Class rdfs:Class }\n\n    # Exclude classes with explicit or implicit non-trivial superclasses\n    FILTER (\n      NOT EXISTS {\n\n        # Explicitly defined non-trivial superclass\n        ?resource rdfs:subClassOf ?explicitParentClass .\n        FILTER (?explicitParentClass != owl:Thing)\n      } && NOT EXISTS {\n\n        # Implicitly defined non-trivial superclass\n        ?resource owl:equivalentClass | rdfs:subClassOf ?complexClass .\n        ?complexClass owl:intersectionOf ?classExpression .\n        ?classExpression rdf:rest*/rdf:first ?implicitParentClass .\n        FILTER isIRI(?implicitParentClass)\n      }\n    )\n  } UNION {\n\n    # Get classes managed by a graph in the current context\n    ?graph shui:managedClasses ?resource .\n\n    # Exclude managed classes of imported graphs\n    FILTER NOT EXISTS { [] owl:imports+ ?graph }\n\n    # Exclude managed classes with a non-trivial managed superclass\n    FILTER NOT EXISTS {\n      ?resource rdfs:subClassOf ?parentClass .\n      ?graph shui:managedClasses ?parentClass .\n      FILTER (?parentClass != owl:Thing)\n    }\n  }\n\n  # Exclude complex class expressions\n  FILTER isIRI(?resource)\n\n  # Placeholder for future use\n  {{VALUES}}\n}",
+      "conceptParentChildQuery": "# Computes the class hierarchy forest used by the navigation list.\n# Each result links a resource to its direct parent and tree root.\n#\n# ?topResource: root of the tree containing the resource\n# ?resource: a node in the tree\n# ?parentResource: direct parent of the node\n#\n# Note: SELECT must be exactly ?topResource, ?resource, and ?parentResource.\n# No rebinding, aliases, or expressions allowed in the projection.\nSELECT DISTINCT ?topResource ?resource ?parentResource\nWHERE {\n  {\n\n    # Get explicit parent resources\n    ?resource rdfs:subClassOf ?parentResource .\n  } UNION {\n\n    # Get implicit parent resources\n    ?resource (owl:equivalentClass | rdfs:subClassOf) ?complexParentClass .\n    ?complexParentClass owl:intersectionOf ?parentClassExpression .\n    ?parentClassExpression rdf:rest*/rdf:first ?parentResource .\n  }\n\n  # Ensure that the parent resource is not a complex class expression\n  FILTER isIRI(?parentResource)\n\n  # Get intermediate resources on the path to the root\n  ?parentResource (\n\n    # Explicit intermediate path elements\n    rdfs:subClassOf |\n\n    # Implicit intermediate path elements\n    ((owl:equivalentClass | rdfs:subClassOf)* / owl:intersectionOf / rdf:rest* / rdf:first)\n\n    # Evaluate path elements transitively\n  )* ?intermediateResource .\n\n  # Ensure that intermediate resources are not complex class expressions\n  FILTER isIRI(?intermediateResource)\n\n  {\n    # Get explicit root resources\n    ?intermediateResource rdfs:subClassOf* ?topResource .\n  } UNION {\n\n    # Get implicit root resources\n    ?intermediateResource (owl:equivalentClass | rdfs:subClassOf)* ?complexTopClass .\n    ?complexTopClass owl:intersectionOf ?topClassExpression .\n    ?topClassExpression rdf:rest*/rdf:first ?topResource .\n  }\n\n  # Ensure that the root resource is not a complex class expression\n  FILTER isIRI(?topResource)\n\n  # Placeholder for future use\n  {{VALUES}}\n}",
+      "fallbackPrefixes": {
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "shui": "https://vocab.eccenca.com/shui/",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "owl": "http://www.w3.org/2002/07/owl#",
+        "dcterms": "http://purl.org/dc/terms/"
+      },
+      "workspaceBadgesConfiguration": {
+        "facets": [
+          {
+            "id": "instanceCount",
+            "labels": [
+              {
+                "value": "Instance Count",
+                "lang": "en"
+              },
+              {
+                "value": "Anzahl Instanzen",
+                "lang": "de"
+              },
+              {
+                "value": "Nombre d'instances",
+                "lang": "fr"
+              }
+            ],
+            "descriptions": [
+              {
+                "value": "Number of instances of the resource and its subclasses",
+                "lang": "en"
+              },
+              {
+                "value": "Anzahl der Instanzen der Ressource und ihrer Unterklassen",
+                "lang": "de"
+              },
+              {
+                "value": "Nombre d'instances de la ressource et de ses sous-classes",
+                "lang": "fr"
+              }
+            ],
+            "prefixes": [
+              {
+                "value": "#",
+                "lang": "en"
+              }
+            ],
+            "type": "NUMERIC",
+            "bgColor": "#EEB757",
+            "query": "# Computes an instance count facet for each resource.\n#\n# ?resource: the resource whose instances are counted\n# ?instanceCount: number of instances of the resource and its subclasses\n#\n# Note: SELECT must be exactly ?resource and ?instanceCount.\n# No rebinding, aliases, or expressions allowed in the projection.\nSELECT ?resource (COUNT(?instance) AS ?instanceCount) {\n\n  # Get all instances of the resource and its subclasses\n  ?instance rdf:type/rdfs:subClassOf* ?resource .\n\n  # Restrict bindings to context-relevant resources\n  {{VALUES}}\n\n# Count instances for each resource\n} GROUP BY ?resource",
+            "order": 0,
+            "alwaysVisible": false,
+            "enabled": false,
+            "target": "RESOURCE"
+          },
+          {
+            "id": "propertyCount",
+            "labels": [
+              {
+                "value": "Properties Count",
+                "lang": "en"
+              },
+              {
+                "value": "Anzahl Properties",
+                "lang": "de"
+              },
+              {
+                "value": "Nombre de propri\u00e9t\u00e9s",
+                "lang": "fr"
+              }
+            ],
+            "descriptions": [
+              {
+                "value": "Number of outgoing properties of the resource",
+                "lang": "en"
+              },
+              {
+                "value": "Anzahl der ausgehenden Properties der Ressource",
+                "lang": "de"
+              },
+              {
+                "value": "Nombre de propri\u00e9t\u00e9s sortantes de la ressource",
+                "lang": "fr"
+              }
+            ],
+            "prefixes": [
+              {
+                "value": "P",
+                "lang": "en"
+              }
+            ],
+            "type": "NUMERIC",
+            "bgColor": "#479D8D",
+            "query": "# Computes an outgoing property count facet for each resource.\n#\n# ?resource: the resource whose outgoing properties are counted\n# ?propertyCount: number of outgoing properties of the resource\n#\n# Note: SELECT must be exactly ?resource and ?propertyCount.\n# No rebinding, aliases, or expressions allowed in the projection.\nSELECT ?resource (COUNT(?p) AS ?propertyCount) {\n\n  # Get all triples with the resource as subject\n  ?resource ?p ?value .\n\n  # Restrict bindings to context-relevant resources\n  {{VALUES}}\n\n# Count outgoing properties for each resource\n} GROUP BY ?resource",
+            "order": 1,
+            "alwaysVisible": false,
+            "enabled": false,
+            "target": "RESOURCE"
+          },
+          {
+            "id": "lastModified",
+            "labels": [
+              {
+                "value": "modified",
+                "lang": "en"
+              },
+              {
+                "value": "ge\u00e4ndert",
+                "lang": "de"
+              },
+              {
+                "value": "modifi\u00e9",
+                "lang": "fr"
+              }
+            ],
+            "descriptions": [
+              {
+                "value": "Latest modification date of the resource",
+                "lang": "en"
+              },
+              {
+                "value": "Letztes \u00c4nderungsdatum der Ressource",
+                "lang": "de"
+              },
+              {
+                "value": "Date de derni\u00e8re modification de la ressource",
+                "lang": "fr"
+              }
+            ],
+            "prefixes": [
+              {
+                "value": "mod: ",
+                "lang": "en"
+              }
+            ],
+            "type": "DATE",
+            "bgColor": "#F1ECB5",
+            "query": "# Computes a \"latest modification date\" facet for each resource.\n#\n# ?resource: the resource with modification dates\n# ?lastModified: latest modification date of the resource\n#\n# Note: SELECT must be exactly ?resource and ?lastModified.\n# No rebinding, aliases, or expressions allowed in the projection.\nSELECT ?resource (MAX(?mDate) AS ?lastModified)\nWHERE {\n\n  # Get modification dates of the resources\n  ?resource dcterms:modified ?mDate .\n\n  # Restrict bindings to context-relevant resources\n  {{VALUES}}\n\n# Compute the latest modification date per resource\n} GROUP BY ?resource",
+            "order": 2,
+            "alwaysVisible": false,
+            "enabled": false,
+            "target": "RESOURCE"
+          },
+          {
+            "id": "systemResource",
+            "labels": [
+              {
+                "value": "system",
+                "lang": "en"
+              },
+              {
+                "value": "System",
+                "lang": "de"
+              },
+              {
+                "value": "syst\u00e8me",
+                "lang": "fr"
+              }
+            ],
+            "descriptions": [
+              {
+                "value": "Flag signifying this resource is a system resource",
+                "lang": "en"
+              },
+              {
+                "value": "Kennzeichnung, ob diese Ressource eine Systemressource ist",
+                "lang": "de"
+              },
+              {
+                "value": "Indique si cette ressource est une ressource syst\u00e8me",
+                "lang": "fr"
+              }
+            ],
+            "prefixes": [
+              {
+                "value": "sys: ",
+                "lang": "en"
+              }
+            ],
+            "type": "STRING",
+            "bgColor": "#86D6E5",
+            "query": "# Computes a \"system resource\" facet for each resource.\n# System resources belong to the eCMEM bootstrap data and may change or be\n# deleted when eCMEM is bootstrapped again.\n#\n# ?resource: the resource to check\n# ?systemResource: whether the resource belongs to the bootstrap data\n#\n# Note: SELECT must be exactly ?resource and ?systemResource.\n# No rebinding, aliases, or expressions allowed in the projection.\nSELECT DISTINCT ?resource ?systemResource {\n\n  # Get the system resource flag, if present\n  OPTIONAL { ?resource shui:isSystemResource ?isSys . }\n\n  # Default to false if the flag is absent\n  BIND(COALESCE(STR(?isSys), \"false\") AS ?systemResource)\n\n  # Restrict bindings to context-relevant resources\n  {{VALUES}}\n}",
+            "order": 3,
+            "alwaysVisible": false,
+            "enabled": false,
+            "target": "RESOURCE"
+          },
+          {
+            "id": "hasClass",
+            "labels": [
+              {
+                "value": "has Class",
+                "lang": "en"
+              },
+              {
+                "value": "hat Klasse",
+                "lang": "de"
+              },
+              {
+                "value": "a la classe",
+                "lang": "fr"
+              }
+            ],
+            "descriptions": [
+              {
+                "value": "Shows the class of this resource",
+                "lang": "en"
+              },
+              {
+                "value": "Zeigt die Klasse dieser Ressource",
+                "lang": "de"
+              },
+              {
+                "value": "Affiche la classe de cette ressource",
+                "lang": "fr"
+              }
+            ],
+            "prefixes": [
+              {
+                "value": "cl: ",
+                "lang": "en"
+              }
+            ],
+            "type": "RESOURCE",
+            "bgColor": "#E6B4CE",
+            "query": "# Computes a class facet for each resource, displaying the resource's class\n# name as a badge.\n#\n# ?resource: the resource whose class is retrieved\n# ?hasClass: a class of the resource\n#\n# Note: SELECT must be exactly ?resource and ?hasClass.\n# No rebinding, aliases, or expressions allowed in the projection.\nSELECT DISTINCT ?resource ?hasClass {\n\n  # Get all class assignments of a resource\n  ?resource a ?hasClass .\n\n  # Restrict bindings to context-relevant resources\n  {{VALUES}}\n}",
+            "order": 4,
+            "alwaysVisible": false,
+            "enabled": false,
+            "target": "RESOURCE"
+          },
+          {
+            "id": "lastChangeDate",
+            "labels": [
+              {
+                "value": "changed on",
+                "lang": "en"
+              },
+              {
+                "value": "ge\u00e4ndert am",
+                "lang": "de"
+              },
+              {
+                "value": "modifi\u00e9 le",
+                "lang": "fr"
+              }
+            ],
+            "descriptions": [
+              {
+                "value": "Shows latest change date for a triple and its annotations",
+                "lang": "en"
+              },
+              {
+                "value": "Zeigt das letzte \u00c4nderungsdatum eines Tripels und seiner Annotationen",
+                "lang": "de"
+              },
+              {
+                "value": "Affiche la date de derni\u00e8re modification d'un triplet et de ses annotations",
+                "lang": "fr"
+              }
+            ],
+            "prefixes": [
+              {
+                "value": "co: ",
+                "lang": "en"
+              }
+            ],
+            "type": "DATE",
+            "bgColor": "#8C1656",
+            "query": "# Changeset vocabulary prefix used by versioning graphs\nPREFIX cs: <http://purl.org/vocab/changeset/schema#>\n\n# Computes the latest change date facet for a triple and its annotations.\n#\n# ?subject: subject of the triple\n# ?predicate: predicate of the triple\n# ?object: object of the triple\n# ?lastChangeDate: latest change date of the triple\n#\n# Note: SELECT must be exactly ?subject, ?predicate, ?object, and ?lastChangeDate.\n# No rebinding, aliases, or expressions allowed in the projection.\nSELECT ?subject ?predicate ?object (MAX(?changeDate) AS ?lastChangeDate)\nWHERE {\n\n  # Get each changeset and the corresponding triple change date\n  ?changeSet a cs:ChangeSet ;\n    cs:addition ?statement ;\n    cs:createdDate ?changeDate .\n\n  # Get the triple components\n  ?statement a rdf:Statement ;\n    rdf:subject ?subject ;\n    rdf:predicate ?predicate ;\n    rdf:object ?object .\n\n  # Restrict bindings to context-relevant resources\n  {{VALUES}}\n\n# Get the latest change date for each triple\n} GROUP BY ?subject ?predicate ?object",
+            "order": 5,
+            "alwaysVisible": false,
+            "enabled": false,
+            "target": "STATEMENT"
+          }
+        ]
+      }
+    },
+    "order": 20,
+    "resolveDepictionsFallbackToOverallContext": true,
+    "resolveDescriptionsFallbackToOverallContext": true,
+    "resolveTitlesFallbackToOverallContext": true,
+    "resourceTableConfiguration": {
+      "timeoutDownload": 600000,
+      "paginationLimit": 20
+    }
+  }
+]

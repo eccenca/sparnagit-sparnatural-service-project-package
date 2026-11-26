@@ -1,0 +1,10 @@
+<ProjectConfig resourceUri="http://di.eccenca.com/project/sparnatural-service">
+  <Prefixes> </Prefixes>
+  <MetaData>
+    <Label>Sparnatural Service dbb4564-dirty</Label>
+    <Description xml:space="preserve"><![CDATA[Serves the Sparnatural visual query builder, configured automatically from the data of a graph and the CMEM shapes catalog. It runs in the browser with the permissions of the logged-in user.
+
+Open the [query builder](/dataintegration/workspace/projects/sparnatural-service/browse/sparnatural.html), or switch to the application view *Search*.]]></Description>
+    <Tags> </Tags>
+  </MetaData>
+</ProjectConfig>

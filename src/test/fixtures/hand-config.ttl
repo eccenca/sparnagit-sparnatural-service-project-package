@@ -1,0 +1,27 @@
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dash: <http://datashapes.org/dash#> .
+@prefix core: <http://data.sparna.fr/ontologies/sparnatural-config-core#> .
+@prefix volipi: <http://data.sparna.fr/ontologies/volipi#> .
+@prefix pv: <http://ld.company.org/prod-vocab/> .
+@prefix this: <https://ns.eccenca.com/sparnatural/config/> .
+
+this:Hardware a sh:NodeShape ; sh:targetClass pv:Hardware ; rdfs:label "Hardware"@en ; sh:order 1 ;
+  volipi:iconName "fa-solid fa-microchip" ;
+  sh:property this:Hardware_label, this:Hardware_hasSupplier, this:Hardware_width, this:Hardware_eligibleForInv .
+this:Service a sh:NodeShape ; sh:targetClass pv:Service ; rdfs:label "Service"@en ; sh:order 2 ;
+  volipi:iconName "fa-solid fa-gears" ; sh:property this:Service_eligibleFor .
+this:Supplier a sh:NodeShape ; sh:targetClass pv:Supplier ; rdfs:label "Supplier"@en ; sh:order 3 ;
+  volipi:iconName "fa-solid fa-truck" .
+
+this:Hardware_label sh:path rdfs:label ; sh:name "label"@en ; sh:datatype xsd:string ;
+  dash:searchWidget core:SearchProperty ; dash:propertyRole dash:LabelRole .
+this:Hardware_hasSupplier sh:path pv:hasSupplier ; sh:name "has supplier"@en ; sh:order 1 ;
+  sh:class pv:Supplier ; dash:searchWidget core:ListProperty .
+this:Hardware_width sh:path pv:width_mm ; sh:name "width (mm)"@en ; sh:order 2 ;
+  sh:datatype xsd:integer ; dash:searchWidget core:NumberProperty .
+this:Hardware_eligibleForInv sh:path [ sh:inversePath pv:eligibleFor ] ; sh:name "has eligible service"@en ; sh:order 3 ;
+  sh:class pv:Service ; dash:searchWidget core:AutocompleteProperty .
+this:Service_eligibleFor sh:path pv:eligibleFor ; sh:name "eligible for"@en ; sh:order 1 ;
+  sh:class pv:Hardware ; dash:searchWidget core:AutocompleteProperty .

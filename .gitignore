@@ -1,0 +1,5 @@
+*.cpa
+dist
+.DS_Store
+.env
+

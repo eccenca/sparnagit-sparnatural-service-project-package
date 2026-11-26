@@ -1,0 +1,12 @@
+# Changes here will be overwritten by Copier
+_commit: v1.2.0
+_src_path: gh:eccenca/cmem-package-template
+github_page: ''
+package_description: Visual query builder for domain users, configured automatically
+    from your data and shapes
+package_id: sparnagit-sparnatural-service-project
+package_name: Sparnatural Query Builder
+package_type: project
+python_dependencies: ''
+vocab_dependencies: ''
+

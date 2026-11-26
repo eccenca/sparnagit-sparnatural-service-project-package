@@ -1,0 +1,169 @@
+{ "head": {
+    "vars": [ "x" , "l" ]
+  } ,
+  "results": {
+    "bindings": [
+      { 
+        "x": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/Price" } ,
+        "l": { "type": "literal" , "xml:lang": "en" , "value": "Price" }
+      } ,
+      { 
+        "x": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/Hardware" } ,
+        "l": { "type": "literal" , "xml:lang": "en" , "value": "Hardware" }
+      } ,
+      { 
+        "x": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/Supplier" } ,
+        "l": { "type": "literal" , "xml:lang": "en" , "value": "Supplier" }
+      } ,
+      { 
+        "x": { "type": "uri" , "value": "http://dbpedia.org/ontology/Country" } ,
+        "l": { "type": "literal" , "xml:lang": "en" , "value": "Country" }
+      } ,
+      { 
+        "x": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/BomPart" } ,
+        "l": { "type": "literal" , "xml:lang": "en" , "value": "BOM Part" }
+      } ,
+      { 
+        "x": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/Employee" } ,
+        "l": { "type": "literal" , "xml:lang": "en" , "value": "Employee" }
+      } ,
+      { 
+        "x": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/ProductCategory" } ,
+        "l": { "type": "literal" , "xml:lang": "en" , "value": "Product Category" }
+      } ,
+      { 
+        "x": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/BillOfMaterial" } ,
+        "l": { "type": "literal" , "xml:lang": "en" , "value": "Bill of Material (BOM)" }
+      } ,
+      { 
+        "x": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/Service" } ,
+        "l": { "type": "literal" , "xml:lang": "en" , "value": "Service" }
+      } ,
+      { 
+        "x": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/Manager" } ,
+        "l": { "type": "literal" , "xml:lang": "en" , "value": "Manager" }
+      } ,
+      { 
+        "x": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/Department" } ,
+        "l": { "type": "literal" , "xml:lang": "en" , "value": "Department" }
+      } ,
+      { 
+        "x": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/hasCategory" } ,
+        "l": { "type": "literal" , "xml:lang": "en" , "value": "has category" }
+      } ,
+      { 
+        "x": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/eligibleFor" } ,
+        "l": { "type": "literal" , "xml:lang": "en" , "value": "eligible for" }
+      } ,
+      { 
+        "x": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/compatibleProduct" } ,
+        "l": { "type": "literal" , "xml:lang": "en" , "value": "compatible product" }
+      } ,
+      { 
+        "x": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/amount" } ,
+        "l": { "type": "literal" , "xml:lang": "en" , "value": "amount" }
+      } ,
+      { 
+        "x": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/currency" } ,
+        "l": { "type": "literal" , "xml:lang": "en" , "value": "currency" }
+      } ,
+      { 
+        "x": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/name" } ,
+        "l": { "type": "literal" , "xml:lang": "en" , "value": "name" }
+      } ,
+      { 
+        "x": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/width_mm" } ,
+        "l": { "type": "literal" , "xml:lang": "en" , "value": "width (mm)" }
+      } ,
+      { 
+        "x": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/id" } ,
+        "l": { "type": "literal" , "xml:lang": "en" , "value": "ID" }
+      } ,
+      { 
+        "x": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/height_mm" } ,
+        "l": { "type": "literal" , "xml:lang": "en" , "value": "height (mm)" }
+      } ,
+      { 
+        "x": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/depth_mm" } ,
+        "l": { "type": "literal" , "xml:lang": "en" , "value": "depth (mm)" }
+      } ,
+      { 
+        "x": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/hasSupplier" } ,
+        "l": { "type": "literal" , "xml:lang": "en" , "value": "supplier" }
+      } ,
+      { 
+        "x": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/hasProductManager" } ,
+        "l": { "type": "literal" , "xml:lang": "en" , "value": "has product manager" }
+      } ,
+      { 
+        "x": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/price" } ,
+        "l": { "type": "literal" , "xml:lang": "en" , "value": "price" }
+      } ,
+      { 
+        "x": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/weight_g" } ,
+        "l": { "type": "literal" , "xml:lang": "en" , "value": "weight (g)" }
+      } ,
+      { 
+        "x": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/reliabilityIndex" } ,
+        "l": { "type": "literal" , "xml:lang": "en" , "value": "has reliability index" }
+      } ,
+      { 
+        "x": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/country" } ,
+        "l": { "type": "literal" , "xml:lang": "en" , "value": "country" }
+      } ,
+      { 
+        "x": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/addressCountryCode" } ,
+        "l": { "type": "literal" , "xml:lang": "en" , "value": "address country code" }
+      } ,
+      { 
+        "x": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/addressCountry" } ,
+        "l": { "type": "literal" , "xml:lang": "en" , "value": "address country" }
+      } ,
+      { 
+        "x": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/addressLocality" } ,
+        "l": { "type": "literal" , "xml:lang": "en" , "value": "address locality" }
+      } ,
+      { 
+        "x": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/quantity" } ,
+        "l": { "type": "literal" , "xml:lang": "en" , "value": "quantity" }
+      } ,
+      { 
+        "x": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/hasPart" } ,
+        "l": { "type": "literal" , "xml:lang": "en" , "value": "part" }
+      } ,
+      { 
+        "x": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/hasBomPart" } ,
+        "l": { "type": "literal" , "xml:lang": "en" , "value": "has BOM Part" }
+      } ,
+      { 
+        "x": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/areaOfExpertise" } ,
+        "l": { "type": "literal" , "xml:lang": "en" , "value": "area of expertise" }
+      } ,
+      { 
+        "x": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/responsibleFor" } ,
+        "l": { "type": "literal" , "xml:lang": "en" , "value": "responsible for" }
+      } ,
+      { 
+        "x": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/email" } ,
+        "l": { "type": "literal" , "xml:lang": "en" , "value": "email" }
+      } ,
+      { 
+        "x": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/memberOf" } ,
+        "l": { "type": "literal" , "xml:lang": "en" , "value": "member of" }
+      } ,
+      { 
+        "x": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/hasManager" } ,
+        "l": { "type": "literal" , "xml:lang": "en" , "value": "has manager" }
+      } ,
+      { 
+        "x": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/phone" } ,
+        "l": { "type": "literal" , "xml:lang": "en" , "value": "phone number" }
+      } ,
+      { 
+        "x": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/addressText" } ,
+        "l": { "type": "literal" , "xml:lang": "en" , "value": "address text" }
+      }
+    ]
+  }
+}
+

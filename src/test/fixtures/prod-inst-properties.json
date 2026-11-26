@@ -1,0 +1,1312 @@
+{ "head": {
+    "vars": [ "c" , "p" , "oc" , "dt" , "n" ]
+  } ,
+  "results": {
+    "bindings": [
+      { 
+        "c": { "type": "uri" , "value": "https://vocab.eccenca.com/di/Dataset" } ,
+        "p": { "type": "uri" , "value": "http://www.w3.org/2000/01/rdf-schema#label" } ,
+        "dt": { "type": "uri" , "value": "http://www.w3.org/2001/XMLSchema#string" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "6" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "http://rdfs.org/ns/void#Dataset" } ,
+        "p": { "type": "uri" , "value": "http://www.w3.org/2000/01/rdf-schema#label" } ,
+        "dt": { "type": "uri" , "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "6" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "http://rdfs.org/ns/void#Dataset" } ,
+        "p": { "type": "uri" , "value": "http://www.w3.org/2000/01/rdf-schema#label" } ,
+        "dt": { "type": "uri" , "value": "http://www.w3.org/2001/XMLSchema#string" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "5" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "http://dbpedia.org/ontology/Country" } ,
+        "p": { "type": "uri" , "value": "http://www.w3.org/2003/01/geo/wgs84_pos#lat" } ,
+        "dt": { "type": "uri" , "value": "http://www.w3.org/2001/XMLSchema#string" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "402" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "http://dbpedia.org/ontology/Country" } ,
+        "p": { "type": "uri" , "value": "http://www.w3.org/2003/01/geo/wgs84_pos#long" } ,
+        "dt": { "type": "uri" , "value": "http://www.w3.org/2001/XMLSchema#string" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "402" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "http://dbpedia.org/ontology/Country" } ,
+        "p": { "type": "uri" , "value": "http://www.w3.org/2000/01/rdf-schema#label" } ,
+        "dt": { "type": "uri" , "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "404" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "http://dbpedia.org/ontology/Country" } ,
+        "p": { "type": "uri" , "value": "http://www.wikidata.org/prop/direct/P297" } ,
+        "dt": { "type": "uri" , "value": "http://www.w3.org/2001/XMLSchema#string" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "404" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "http://dbpedia.org/ontology/Country" } ,
+        "p": { "type": "uri" , "value": "http://dbpedia.org/property/hdi" } ,
+        "dt": { "type": "uri" , "value": "http://www.w3.org/2001/XMLSchema#double" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "382" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "http://dbpedia.org/ontology/Country" } ,
+        "p": { "type": "uri" , "value": "http://dbpedia.org/ontology/currency" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "430" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "http://dbpedia.org/ontology/Country" } ,
+        "p": { "type": "uri" , "value": "http://dbpedia.org/ontology/governmentType" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "416" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "http://dbpedia.org/ontology/Country" } ,
+        "p": { "type": "uri" , "value": "http://dbpedia.org/ontology/populationDensity" } ,
+        "dt": { "type": "uri" , "value": "http://www.w3.org/2001/XMLSchema#double" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "700" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "http://dbpedia.org/ontology/Country" } ,
+        "p": { "type": "uri" , "value": "http://dbpedia.org/ontology/humanDevelopmentIndex" } ,
+        "dt": { "type": "uri" , "value": "http://www.w3.org/2001/XMLSchema#float" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "380" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "http://dbpedia.org/ontology/Country" } ,
+        "p": { "type": "uri" , "value": "http://dbpedia.org/ontology/populationTotal" } ,
+        "dt": { "type": "uri" , "value": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "320" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "http://dbpedia.org/ontology/Country" } ,
+        "p": { "type": "uri" , "value": "http://dbpedia.org/property/commonName" } ,
+        "dt": { "type": "uri" , "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "386" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "http://dbpedia.org/ontology/Country" } ,
+        "p": { "type": "uri" , "value": "http://dbpedia.org/property/conventionalLongName" } ,
+        "dt": { "type": "uri" , "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "396" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "http://dbpedia.org/ontology/Country" } ,
+        "p": { "type": "uri" , "value": "http://dbpedia.org/property/gdpNominal" } ,
+        "dt": { "type": "uri" , "value": "http://dbpedia.org/datatype/usDollar" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "380" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "http://dbpedia.org/ontology/Country" } ,
+        "p": { "type": "uri" , "value": "http://dbpedia.org/property/gdpNominalPerCapita" } ,
+        "dt": { "type": "uri" , "value": "http://dbpedia.org/datatype/usDollar" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "390" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "http://dbpedia.org/ontology/Country" } ,
+        "p": { "type": "uri" , "value": "http://eccenca.com/worldfactbook/vocab#government" } ,
+        "dt": { "type": "uri" , "value": "http://www.w3.org/2001/XMLSchema#string" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "402" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "http://dbpedia.org/ontology/Country" } ,
+        "p": { "type": "uri" , "value": "http://eccenca.com/worldfactbook/vocab#internet_users" } ,
+        "dt": { "type": "uri" , "value": "http://www.w3.org/2001/XMLSchema#string" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "402" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "http://dbpedia.org/ontology/Country" } ,
+        "p": { "type": "uri" , "value": "http://dbpedia.org/property/hdiChange" } ,
+        "dt": { "type": "uri" , "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "382" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "http://dbpedia.org/ontology/Country" } ,
+        "p": { "type": "uri" , "value": "http://dbpedia.org/property/hdiRank" } ,
+        "dt": { "type": "uri" , "value": "http://www.w3.org/2001/XMLSchema#integer" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "318" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "http://dbpedia.org/ontology/Country" } ,
+        "p": { "type": "uri" , "value": "http://www.wikidata.org/prop/direct/P298" } ,
+        "dt": { "type": "uri" , "value": "http://www.w3.org/2001/XMLSchema#string" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "404" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "http://dbpedia.org/ontology/Country" } ,
+        "p": { "type": "uri" , "value": "http://dbpedia.org/ontology/giniCoefficient" } ,
+        "dt": { "type": "uri" , "value": "http://www.w3.org/2001/XMLSchema#float" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "340" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "http://dbpedia.org/ontology/Country" } ,
+        "p": { "type": "uri" , "value": "http://dbpedia.org/ontology/timeZone" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "360" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "http://dbpedia.org/ontology/Country" } ,
+        "p": { "type": "uri" , "value": "http://dbpedia.org/property/gini" } ,
+        "dt": { "type": "uri" , "value": "http://www.w3.org/2001/XMLSchema#double" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "302" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "http://dbpedia.org/ontology/Country" } ,
+        "p": { "type": "uri" , "value": "http://xmlns.com/foaf/0.1/depiction" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "404" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "http://dbpedia.org/ontology/Country" } ,
+        "p": { "type": "uri" , "value": "http://dbpedia.org/property/gdpNominal" } ,
+        "dt": { "type": "uri" , "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "38" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "http://dbpedia.org/ontology/Country" } ,
+        "p": { "type": "uri" , "value": "http://www.opengis.net/ont/geosparql#hasGeometry" } ,
+        "oc": { "type": "uri" , "value": "http://www.opengis.net/ont/sf#Point" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "356" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "http://dbpedia.org/ontology/Country" } ,
+        "p": { "type": "uri" , "value": "http://dbpedia.org/property/officialLanguages" } ,
+        "dt": { "type": "uri" , "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "242" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "http://dbpedia.org/ontology/Country" } ,
+        "p": { "type": "uri" , "value": "http://dbpedia.org/property/officialLanguages" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "426" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "http://dbpedia.org/ontology/Country" } ,
+        "p": { "type": "uri" , "value": "http://eccenca.com/worldfactbook/vocab#fitch_rating" } ,
+        "dt": { "type": "uri" , "value": "http://www.w3.org/2001/XMLSchema#string" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "228" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "http://dbpedia.org/ontology/Country" } ,
+        "p": { "type": "uri" , "value": "http://eccenca.com/worldfactbook/vocab#moody_rating" } ,
+        "dt": { "type": "uri" , "value": "http://www.w3.org/2001/XMLSchema#string" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "238" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "http://dbpedia.org/ontology/Country" } ,
+        "p": { "type": "uri" , "value": "http://eccenca.com/worldfactbook/vocab#standard_and_poors_rating" } ,
+        "dt": { "type": "uri" , "value": "http://www.w3.org/2001/XMLSchema#string" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "228" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "http://dbpedia.org/ontology/Country" } ,
+        "p": { "type": "uri" , "value": "http://dbpedia.org/property/hdiRank" } ,
+        "dt": { "type": "uri" , "value": "http://dbpedia.org/datatype/stone" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "28" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "http://dbpedia.org/ontology/Country" } ,
+        "p": { "type": "uri" , "value": "http://dbpedia.org/property/gini" } ,
+        "dt": { "type": "uri" , "value": "http://www.w3.org/2001/XMLSchema#integer" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "40" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "http://dbpedia.org/ontology/Country" } ,
+        "p": { "type": "uri" , "value": "http://dbpedia.org/property/hdiRank" } ,
+        "dt": { "type": "uri" , "value": "http://dbpedia.org/datatype/rod" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "30" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "http://dbpedia.org/ontology/Country" } ,
+        "p": { "type": "uri" , "value": "http://dbpedia.org/property/officialLanguages" } ,
+        "dt": { "type": "uri" , "value": "http://www.w3.org/2001/XMLSchema#integer" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "4" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "http://dbpedia.org/ontology/Country" } ,
+        "p": { "type": "uri" , "value": "http://dbpedia.org/property/gdpNominalPerCapita" } ,
+        "dt": { "type": "uri" , "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "4" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "http://dbpedia.org/ontology/Country" } ,
+        "p": { "type": "uri" , "value": "http://dbpedia.org/ontology/governmentType" } ,
+        "oc": { "type": "uri" , "value": "http://dbpedia.org/ontology/Country" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "2" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/Employee" } ,
+        "p": { "type": "uri" , "value": "http://www.w3.org/2000/01/rdf-schema#label" } ,
+        "dt": { "type": "uri" , "value": "http://www.w3.org/2001/XMLSchema#string" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "47" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/Employee" } ,
+        "p": { "type": "uri" , "value": "http://www.w3.org/ns/prov#wasDerivedFrom" } ,
+        "oc": { "type": "uri" , "value": "http://www.w3.org/ns/prov#Entity" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "47" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/Employee" } ,
+        "p": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/name" } ,
+        "dt": { "type": "uri" , "value": "http://www.w3.org/2001/XMLSchema#string" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "47" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/Employee" } ,
+        "p": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/areaOfExpertise" } ,
+        "oc": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/ProductCategory" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "142" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/Employee" } ,
+        "p": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/phone" } ,
+        "dt": { "type": "uri" , "value": "http://www.w3.org/2001/XMLSchema#string" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "36" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/Employee" } ,
+        "p": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/email" } ,
+        "dt": { "type": "uri" , "value": "http://www.w3.org/2001/XMLSchema#string" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "47" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/Employee" } ,
+        "p": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/memberOf" } ,
+        "oc": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/Department" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "47" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/Employee" } ,
+        "p": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/addressText" } ,
+        "dt": { "type": "uri" , "value": "http://www.w3.org/2001/XMLSchema#string" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "31" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/Employee" } ,
+        "p": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/hasManager" } ,
+        "oc": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/Manager" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "47" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/Employee" } ,
+        "p": { "type": "uri" , "value": "https://vocab.eccenca.com/shui/conforms" } ,
+        "dt": { "type": "uri" , "value": "http://www.w3.org/2001/XMLSchema#boolean" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "11" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/Manager" } ,
+        "p": { "type": "uri" , "value": "http://www.w3.org/2000/01/rdf-schema#label" } ,
+        "dt": { "type": "uri" , "value": "http://www.w3.org/2001/XMLSchema#string" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "6" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/Manager" } ,
+        "p": { "type": "uri" , "value": "http://www.w3.org/ns/prov#wasDerivedFrom" } ,
+        "oc": { "type": "uri" , "value": "http://www.w3.org/ns/prov#Entity" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "6" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/Manager" } ,
+        "p": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/name" } ,
+        "dt": { "type": "uri" , "value": "http://www.w3.org/2001/XMLSchema#string" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "6" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/Manager" } ,
+        "p": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/phone" } ,
+        "dt": { "type": "uri" , "value": "http://www.w3.org/2001/XMLSchema#string" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "6" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/Manager" } ,
+        "p": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/email" } ,
+        "dt": { "type": "uri" , "value": "http://www.w3.org/2001/XMLSchema#string" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "6" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/Manager" } ,
+        "p": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/memberOf" } ,
+        "oc": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/Department" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "6" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/Manager" } ,
+        "p": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/addressText" } ,
+        "dt": { "type": "uri" , "value": "http://www.w3.org/2001/XMLSchema#string" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "4" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "http://www.w3.org/ns/prov#Entity" } ,
+        "p": { "type": "uri" , "value": "http://www.w3.org/2000/01/rdf-schema#label" } ,
+        "dt": { "type": "uri" , "value": "http://www.w3.org/2001/XMLSchema#string" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "3" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/ProductCategory" } ,
+        "p": { "type": "uri" , "value": "http://www.w3.org/2000/01/rdf-schema#label" } ,
+        "dt": { "type": "uri" , "value": "http://www.w3.org/2001/XMLSchema#string" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "26" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/ProductCategory" } ,
+        "p": { "type": "uri" , "value": "http://www.w3.org/ns/prov#wasDerivedFrom" } ,
+        "oc": { "type": "uri" , "value": "http://www.w3.org/ns/prov#Entity" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "26" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/ProductCategory" } ,
+        "p": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/name" } ,
+        "dt": { "type": "uri" , "value": "http://www.w3.org/2001/XMLSchema#string" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "26" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/Department" } ,
+        "p": { "type": "uri" , "value": "http://www.w3.org/2000/01/rdf-schema#label" } ,
+        "dt": { "type": "uri" , "value": "http://www.w3.org/2001/XMLSchema#string" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "6" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/Department" } ,
+        "p": { "type": "uri" , "value": "http://www.w3.org/ns/prov#wasDerivedFrom" } ,
+        "oc": { "type": "uri" , "value": "http://www.w3.org/ns/prov#Entity" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "6" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/Department" } ,
+        "p": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/name" } ,
+        "dt": { "type": "uri" , "value": "http://www.w3.org/2001/XMLSchema#string" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "6" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/Department" } ,
+        "p": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/id" } ,
+        "dt": { "type": "uri" , "value": "http://www.w3.org/2001/XMLSchema#string" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "6" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/Department" } ,
+        "p": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/responsibleFor" } ,
+        "oc": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/Hardware" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "50" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/Department" } ,
+        "p": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/responsibleFor" } ,
+        "oc": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/Service" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "8" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/Department" } ,
+        "p": { "type": "uri" , "value": "https://vocab.eccenca.com/shui/conforms" } ,
+        "dt": { "type": "uri" , "value": "http://www.w3.org/2001/XMLSchema#boolean" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "6" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/BomPart" } ,
+        "p": { "type": "uri" , "value": "http://www.w3.org/2000/01/rdf-schema#label" } ,
+        "dt": { "type": "uri" , "value": "http://www.w3.org/2001/XMLSchema#string" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "199" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/BomPart" } ,
+        "p": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/hasPart" } ,
+        "oc": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/Hardware" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "197" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/BomPart" } ,
+        "p": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/quantity" } ,
+        "dt": { "type": "uri" , "value": "http://www.w3.org/2001/XMLSchema#string" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "199" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/BomPart" } ,
+        "p": { "type": "uri" , "value": "https://vocab.eccenca.com/shui/conforms" } ,
+        "dt": { "type": "uri" , "value": "http://www.w3.org/2001/XMLSchema#boolean" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "2" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/BillOfMaterial" } ,
+        "p": { "type": "uri" , "value": "http://www.w3.org/2000/01/rdf-schema#label" } ,
+        "dt": { "type": "uri" , "value": "http://www.w3.org/2001/XMLSchema#string" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "20" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/BillOfMaterial" } ,
+        "p": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/name" } ,
+        "dt": { "type": "uri" , "value": "http://www.w3.org/2001/XMLSchema#string" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "20" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/BillOfMaterial" } ,
+        "p": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/hasBomPart" } ,
+        "oc": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/BomPart" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "197" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/Service" } ,
+        "p": { "type": "uri" , "value": "http://www.w3.org/2000/01/rdf-schema#label" } ,
+        "dt": { "type": "uri" , "value": "http://www.w3.org/2001/XMLSchema#string" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "9" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/Service" } ,
+        "p": { "type": "uri" , "value": "http://www.w3.org/ns/prov#wasDerivedFrom" } ,
+        "oc": { "type": "uri" , "value": "http://www.w3.org/ns/prov#Entity" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "9" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/Service" } ,
+        "p": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/name" } ,
+        "dt": { "type": "uri" , "value": "http://www.w3.org/2001/XMLSchema#string" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "9" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/Service" } ,
+        "p": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/id" } ,
+        "dt": { "type": "uri" , "value": "http://www.w3.org/2001/XMLSchema#string" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "9" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/Service" } ,
+        "p": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/hasProductManager" } ,
+        "oc": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/Employee" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "8" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/Service" } ,
+        "p": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/price" } ,
+        "oc": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/Price" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "9" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/Service" } ,
+        "p": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/eligibleFor" } ,
+        "oc": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/Hardware" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "2093" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/Service" } ,
+        "p": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/hasCategory" } ,
+        "oc": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/ProductCategory" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/Service" } ,
+        "p": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/hasProductManager" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/Price" } ,
+        "p": { "type": "uri" , "value": "http://www.w3.org/2000/01/rdf-schema#label" } ,
+        "dt": { "type": "uri" , "value": "http://www.w3.org/2001/XMLSchema#string" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1009" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/Price" } ,
+        "p": { "type": "uri" , "value": "http://www.w3.org/ns/prov#wasDerivedFrom" } ,
+        "oc": { "type": "uri" , "value": "http://www.w3.org/ns/prov#Entity" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1009" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/Price" } ,
+        "p": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/amount" } ,
+        "dt": { "type": "uri" , "value": "http://www.w3.org/2001/XMLSchema#double" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1009" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/Price" } ,
+        "p": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/currency" } ,
+        "dt": { "type": "uri" , "value": "http://www.w3.org/2001/XMLSchema#string" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1009" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "http://www.w3.org/2002/07/owl#AnnotationProperty" } ,
+        "p": { "type": "uri" , "value": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "8" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "http://xmlns.com/foaf/0.1/Organization" } ,
+        "p": { "type": "uri" , "value": "http://xmlns.com/foaf/0.1/name" } ,
+        "dt": { "type": "uri" , "value": "http://www.w3.org/2001/XMLSchema#string" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "http://purl.org/dc/terms/Agent" } ,
+        "p": { "type": "uri" , "value": "http://xmlns.com/foaf/0.1/name" } ,
+        "dt": { "type": "uri" , "value": "http://www.w3.org/2001/XMLSchema#string" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "http://rdfs.org/ns/void#Dataset" } ,
+        "p": { "type": "uri" , "value": "https://vocab.eccenca.com/shui/managedClasses" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "6" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "http://rdfs.org/ns/void#Dataset" } ,
+        "p": { "type": "uri" , "value": "http://www.w3.org/2002/07/owl#imports" } ,
+        "oc": { "type": "uri" , "value": "https://vocab.eccenca.com/di/Dataset" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "6" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "http://rdfs.org/ns/void#Dataset" } ,
+        "p": { "type": "uri" , "value": "http://www.w3.org/2002/07/owl#imports" } ,
+        "oc": { "type": "uri" , "value": "http://www.w3.org/2002/07/owl#Ontology" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "http://rdfs.org/ns/void#Dataset" } ,
+        "p": { "type": "uri" , "value": "http://www.w3.org/2002/07/owl#imports" } ,
+        "oc": { "type": "uri" , "value": "http://rdfs.org/ns/void#Dataset" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "4" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "http://rdfs.org/ns/void#Dataset" } ,
+        "p": { "type": "uri" , "value": "http://www.w3.org/2002/07/owl#imports" } ,
+        "oc": { "type": "uri" , "value": "https://vocab.eccenca.com/shui/QueryCatalog" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "http://rdfs.org/ns/void#Dataset" } ,
+        "p": { "type": "uri" , "value": "https://vocab.eccenca.com/shui/isFavorite" } ,
+        "dt": { "type": "uri" , "value": "http://www.w3.org/2001/XMLSchema#boolean" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "http://www.w3.org/2002/07/owl#ObjectProperty" } ,
+        "p": { "type": "uri" , "value": "http://www.w3.org/2000/01/rdf-schema#domain" } ,
+        "oc": { "type": "uri" , "value": "http://www.w3.org/2002/07/owl#Class" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "14" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "http://www.w3.org/2002/07/owl#ObjectProperty" } ,
+        "p": { "type": "uri" , "value": "http://www.w3.org/2000/01/rdf-schema#range" } ,
+        "oc": { "type": "uri" , "value": "http://www.w3.org/2002/07/owl#Class" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "14" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "http://www.w3.org/2002/07/owl#ObjectProperty" } ,
+        "p": { "type": "uri" , "value": "http://www.w3.org/2000/01/rdf-schema#comment" } ,
+        "dt": { "type": "uri" , "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "14" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "http://www.w3.org/2002/07/owl#ObjectProperty" } ,
+        "p": { "type": "uri" , "value": "http://www.w3.org/2000/01/rdf-schema#label" } ,
+        "dt": { "type": "uri" , "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "14" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "http://www.w3.org/2002/07/owl#ObjectProperty" } ,
+        "p": { "type": "uri" , "value": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" } ,
+        "oc": { "type": "uri" , "value": "http://www.w3.org/2002/07/owl#Ontology" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "14" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "http://www.w3.org/2002/07/owl#ObjectProperty" } ,
+        "p": { "type": "uri" , "value": "http://xmlns.com/foaf/0.1/depiction" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "14" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "http://www.w3.org/2002/07/owl#DatatypeProperty" } ,
+        "p": { "type": "uri" , "value": "http://www.w3.org/2000/01/rdf-schema#range" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "16" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "http://www.w3.org/2002/07/owl#DatatypeProperty" } ,
+        "p": { "type": "uri" , "value": "http://www.w3.org/2000/01/rdf-schema#comment" } ,
+        "dt": { "type": "uri" , "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "16" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "http://www.w3.org/2002/07/owl#DatatypeProperty" } ,
+        "p": { "type": "uri" , "value": "http://www.w3.org/2000/01/rdf-schema#label" } ,
+        "dt": { "type": "uri" , "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "16" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "http://www.w3.org/2002/07/owl#DatatypeProperty" } ,
+        "p": { "type": "uri" , "value": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" } ,
+        "oc": { "type": "uri" , "value": "http://www.w3.org/2002/07/owl#Ontology" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "16" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "http://www.w3.org/2002/07/owl#DatatypeProperty" } ,
+        "p": { "type": "uri" , "value": "http://xmlns.com/foaf/0.1/depiction" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "16" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "http://www.w3.org/2002/07/owl#Class" } ,
+        "p": { "type": "uri" , "value": "http://www.w3.org/2000/01/rdf-schema#comment" } ,
+        "dt": { "type": "uri" , "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "12" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "http://www.w3.org/2002/07/owl#Class" } ,
+        "p": { "type": "uri" , "value": "http://www.w3.org/2000/01/rdf-schema#label" } ,
+        "dt": { "type": "uri" , "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "15" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "http://www.w3.org/2002/07/owl#Class" } ,
+        "p": { "type": "uri" , "value": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" } ,
+        "oc": { "type": "uri" , "value": "http://www.w3.org/2002/07/owl#Ontology" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "12" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "http://www.w3.org/2002/07/owl#Class" } ,
+        "p": { "type": "uri" , "value": "http://xmlns.com/foaf/0.1/depiction" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "13" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "http://www.w3.org/2002/07/owl#DatatypeProperty" } ,
+        "p": { "type": "uri" , "value": "http://www.w3.org/2000/01/rdf-schema#domain" } ,
+        "oc": { "type": "uri" , "value": "http://www.w3.org/2002/07/owl#Class" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "14" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "http://www.w3.org/2002/07/owl#Class" } ,
+        "p": { "type": "uri" , "value": "http://www.w3.org/2000/01/rdf-schema#subClassOf" } ,
+        "oc": { "type": "uri" , "value": "http://www.w3.org/2002/07/owl#Class" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "5" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "http://www.w3.org/2002/07/owl#Class" } ,
+        "p": { "type": "uri" , "value": "http://purl.org/dc/terms/modified" } ,
+        "dt": { "type": "uri" , "value": "http://www.w3.org/2001/XMLSchema#date" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "2" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "http://www.w3.org/2002/07/owl#Ontology" } ,
+        "p": { "type": "uri" , "value": "http://www.w3.org/2000/01/rdf-schema#comment" } ,
+        "dt": { "type": "uri" , "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "http://www.w3.org/2002/07/owl#Ontology" } ,
+        "p": { "type": "uri" , "value": "http://www.w3.org/2000/01/rdf-schema#label" } ,
+        "dt": { "type": "uri" , "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "http://www.w3.org/2002/07/owl#Ontology" } ,
+        "p": { "type": "uri" , "value": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" } ,
+        "oc": { "type": "uri" , "value": "http://www.w3.org/2002/07/owl#Ontology" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "http://www.w3.org/2002/07/owl#Ontology" } ,
+        "p": { "type": "uri" , "value": "http://www.w3.org/2002/07/owl#versionInfo" } ,
+        "dt": { "type": "uri" , "value": "http://www.w3.org/2001/XMLSchema#string" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "http://www.w3.org/2002/07/owl#Ontology" } ,
+        "p": { "type": "uri" , "value": "http://purl.org/dc/terms/publisher" } ,
+        "oc": { "type": "uri" , "value": "http://xmlns.com/foaf/0.1/Organization" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "http://www.w3.org/2002/07/owl#Ontology" } ,
+        "p": { "type": "uri" , "value": "http://purl.org/dc/terms/publisher" } ,
+        "oc": { "type": "uri" , "value": "http://purl.org/dc/terms/Agent" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "http://www.w3.org/2002/07/owl#Ontology" } ,
+        "p": { "type": "uri" , "value": "http://creativecommons.org/ns#license" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "http://www.w3.org/2002/07/owl#Ontology" } ,
+        "p": { "type": "uri" , "value": "http://rdfs.org/ns/void#vocabulary" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "2" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "http://www.w3.org/2002/07/owl#Ontology" } ,
+        "p": { "type": "uri" , "value": "http://purl.org/vocab/vann/preferredNamespacePrefix" } ,
+        "dt": { "type": "uri" , "value": "http://www.w3.org/2001/XMLSchema#string" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "http://www.w3.org/2002/07/owl#Ontology" } ,
+        "p": { "type": "uri" , "value": "http://purl.org/vocab/vann/preferredNamespaceUri" } ,
+        "dt": { "type": "uri" , "value": "http://www.w3.org/2001/XMLSchema#string" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "http://www.w3.org/2002/07/owl#Ontology" } ,
+        "p": { "type": "uri" , "value": "http://purl.org/dc/terms/created" } ,
+        "dt": { "type": "uri" , "value": "http://www.w3.org/2001/XMLSchema#date" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "http://www.w3.org/2002/07/owl#Ontology" } ,
+        "p": { "type": "uri" , "value": "http://purl.org/dc/terms/modified" } ,
+        "dt": { "type": "uri" , "value": "http://www.w3.org/2001/XMLSchema#date" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "http://www.w3.org/2002/07/owl#Ontology" } ,
+        "p": { "type": "uri" , "value": "http://purl.org/dc/terms/creator" } ,
+        "oc": { "type": "uri" , "value": "http://purl.org/dc/terms/Agent" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "http://www.w3.org/2002/07/owl#Ontology" } ,
+        "p": { "type": "uri" , "value": "http://purl.org/dc/terms/creator" } ,
+        "oc": { "type": "uri" , "value": "http://xmlns.com/foaf/0.1/Person" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "http://www.w3.org/2002/07/owl#Ontology" } ,
+        "p": { "type": "uri" , "value": "http://purl.org/dc/terms/contributor" } ,
+        "oc": { "type": "uri" , "value": "http://purl.org/dc/terms/Agent" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "http://www.w3.org/2002/07/owl#Ontology" } ,
+        "p": { "type": "uri" , "value": "http://purl.org/dc/terms/contributor" } ,
+        "oc": { "type": "uri" , "value": "http://xmlns.com/foaf/0.1/Person" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "http://purl.org/dc/terms/Agent" } ,
+        "p": { "type": "uri" , "value": "http://www.w3.org/2000/01/rdf-schema#label" } ,
+        "dt": { "type": "uri" , "value": "http://www.w3.org/2001/XMLSchema#string" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "2" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "http://xmlns.com/foaf/0.1/Person" } ,
+        "p": { "type": "uri" , "value": "http://www.w3.org/2000/01/rdf-schema#label" } ,
+        "dt": { "type": "uri" , "value": "http://www.w3.org/2001/XMLSchema#string" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "2" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "http://www.w3.org/ns/shacl#ValidationResult" } ,
+        "p": { "type": "uri" , "value": "http://www.w3.org/2000/01/rdf-schema#label" } ,
+        "dt": { "type": "uri" , "value": "http://www.w3.org/2001/XMLSchema#string" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "71" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "http://www.w3.org/ns/shacl#ValidationResult" } ,
+        "p": { "type": "uri" , "value": "http://www.w3.org/ns/shacl#focusNode" } ,
+        "oc": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/Department" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "58" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "http://www.w3.org/ns/shacl#ValidationResult" } ,
+        "p": { "type": "uri" , "value": "http://www.w3.org/ns/shacl#resultMessage" } ,
+        "dt": { "type": "uri" , "value": "http://www.w3.org/2001/XMLSchema#string" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "71" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "http://www.w3.org/ns/shacl#ValidationResult" } ,
+        "p": { "type": "uri" , "value": "http://www.w3.org/ns/shacl#resultPath" } ,
+        "oc": { "type": "uri" , "value": "http://www.w3.org/2002/07/owl#ObjectProperty" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "58" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "http://www.w3.org/ns/shacl#ValidationResult" } ,
+        "p": { "type": "uri" , "value": "http://www.w3.org/ns/shacl#resultSeverity" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "71" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "http://www.w3.org/ns/shacl#ValidationResult" } ,
+        "p": { "type": "uri" , "value": "http://www.w3.org/ns/shacl#sourceConstraintComponent" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "71" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "http://www.w3.org/ns/shacl#ValidationResult" } ,
+        "p": { "type": "uri" , "value": "http://www.w3.org/ns/shacl#sourceShape" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "71" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "http://www.w3.org/ns/shacl#ValidationResult" } ,
+        "p": { "type": "uri" , "value": "http://www.w3.org/ns/shacl#value" } ,
+        "oc": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/Hardware" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "50" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "http://www.w3.org/ns/shacl#ValidationResult" } ,
+        "p": { "type": "uri" , "value": "http://www.w3.org/ns/shacl#focusNode" } ,
+        "oc": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/Employee" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "11" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "http://www.w3.org/ns/shacl#ValidationResult" } ,
+        "p": { "type": "uri" , "value": "http://www.w3.org/ns/shacl#resultPath" } ,
+        "oc": { "type": "uri" , "value": "http://www.w3.org/2002/07/owl#DatatypeProperty" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "11" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "http://www.w3.org/ns/shacl#ValidationResult" } ,
+        "p": { "type": "uri" , "value": "http://www.w3.org/ns/shacl#value" } ,
+        "oc": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/Service" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "8" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "http://www.w3.org/ns/shacl#ValidationResult" } ,
+        "p": { "type": "uri" , "value": "http://www.w3.org/ns/shacl#focusNode" } ,
+        "oc": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/BomPart" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "2" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "http://www.w3.org/ns/shacl#ValidationResult" } ,
+        "p": { "type": "uri" , "value": "http://www.w3.org/ns/shacl#resultPath" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "2" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "http://www.w3.org/ns/shacl#ValidationReport" } ,
+        "p": { "type": "uri" , "value": "http://www.w3.org/2000/01/rdf-schema#label" } ,
+        "dt": { "type": "uri" , "value": "http://www.w3.org/2001/XMLSchema#string" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "http://www.w3.org/ns/shacl#ValidationReport" } ,
+        "p": { "type": "uri" , "value": "http://www.w3.org/ns/prov#wasDerivedFrom" } ,
+        "oc": { "type": "uri" , "value": "http://rdfs.org/ns/void#Dataset" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "http://www.w3.org/ns/shacl#ValidationReport" } ,
+        "p": { "type": "uri" , "value": "http://www.w3.org/ns/prov#wasInformedBy" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "http://www.w3.org/ns/shacl#ValidationReport" } ,
+        "p": { "type": "uri" , "value": "http://www.w3.org/ns/prov#generatedAtTime" } ,
+        "dt": { "type": "uri" , "value": "http://www.w3.org/2001/XMLSchema#dateTime" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "http://www.w3.org/ns/shacl#ValidationReport" } ,
+        "p": { "type": "uri" , "value": "http://www.w3.org/ns/shacl#conforms" } ,
+        "dt": { "type": "uri" , "value": "http://www.w3.org/2001/XMLSchema#boolean" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "http://www.w3.org/ns/shacl#ValidationReport" } ,
+        "p": { "type": "uri" , "value": "http://www.w3.org/ns/shacl#result" } ,
+        "oc": { "type": "uri" , "value": "http://www.w3.org/ns/shacl#ValidationResult" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "71" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "http://www.opengis.net/ont/sf#Point" } ,
+        "p": { "type": "uri" , "value": "http://www.opengis.net/ont/geosparql#asWKT" } ,
+        "dt": { "type": "uri" , "value": "http://www.opengis.net/ont/geosparql#wktLiteral" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "178" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "http://rdfs.org/ns/void#Dataset" } ,
+        "p": { "type": "uri" , "value": "http://www.w3.org/2000/01/rdf-schema#comment" } ,
+        "dt": { "type": "uri" , "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "https://vocab.eccenca.com/shui/QueryCatalog" } ,
+        "p": { "type": "uri" , "value": "http://www.w3.org/2000/01/rdf-schema#comment" } ,
+        "dt": { "type": "uri" , "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "https://vocab.eccenca.com/shui/QueryCatalog" } ,
+        "p": { "type": "uri" , "value": "http://www.w3.org/2000/01/rdf-schema#label" } ,
+        "dt": { "type": "uri" , "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "https://vocab.eccenca.com/shui/QueryCatalog" } ,
+        "p": { "type": "uri" , "value": "https://vocab.eccenca.com/shui/managedClasses" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "3" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "https://vocab.eccenca.com/shui/SparqlQuery" } ,
+        "p": { "type": "uri" , "value": "http://www.w3.org/2000/01/rdf-schema#label" } ,
+        "dt": { "type": "uri" , "value": "http://www.w3.org/2001/XMLSchema#string" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "16" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "https://vocab.eccenca.com/shui/SparqlQuery" } ,
+        "p": { "type": "uri" , "value": "http://purl.org/dc/terms/description" } ,
+        "dt": { "type": "uri" , "value": "http://www.w3.org/2001/XMLSchema#string" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "14" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "https://vocab.eccenca.com/shui/SparqlQuery" } ,
+        "p": { "type": "uri" , "value": "http://purl.org/dc/terms/created" } ,
+        "dt": { "type": "uri" , "value": "http://www.w3.org/2001/XMLSchema#dateTime" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "16" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "https://vocab.eccenca.com/shui/SparqlQuery" } ,
+        "p": { "type": "uri" , "value": "http://purl.org/dc/terms/modified" } ,
+        "dt": { "type": "uri" , "value": "http://www.w3.org/2001/XMLSchema#dateTime" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "16" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "https://vocab.eccenca.com/shui/SparqlQuery" } ,
+        "p": { "type": "uri" , "value": "https://vocab.eccenca.com/shui/queryText" } ,
+        "dt": { "type": "uri" , "value": "http://www.w3.org/2001/XMLSchema#string" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "16" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "https://vocab.eccenca.com/shui/SparqlQuery" } ,
+        "p": { "type": "uri" , "value": "https://vocab.eccenca.com/shui/queryType" } ,
+        "dt": { "type": "uri" , "value": "http://www.w3.org/2001/XMLSchema#string" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "15" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "https://vocab.eccenca.com/shui/SparqlOperation" } ,
+        "p": { "type": "uri" , "value": "http://www.w3.org/2000/01/rdf-schema#label" } ,
+        "dt": { "type": "uri" , "value": "http://www.w3.org/2001/XMLSchema#string" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "13" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "https://vocab.eccenca.com/shui/SparqlOperation" } ,
+        "p": { "type": "uri" , "value": "http://purl.org/dc/terms/description" } ,
+        "dt": { "type": "uri" , "value": "http://www.w3.org/2001/XMLSchema#string" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "11" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "https://vocab.eccenca.com/shui/SparqlOperation" } ,
+        "p": { "type": "uri" , "value": "http://purl.org/dc/terms/created" } ,
+        "dt": { "type": "uri" , "value": "http://www.w3.org/2001/XMLSchema#dateTime" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "13" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "https://vocab.eccenca.com/shui/SparqlOperation" } ,
+        "p": { "type": "uri" , "value": "http://purl.org/dc/terms/modified" } ,
+        "dt": { "type": "uri" , "value": "http://www.w3.org/2001/XMLSchema#dateTime" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "13" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "https://vocab.eccenca.com/shui/SparqlOperation" } ,
+        "p": { "type": "uri" , "value": "https://vocab.eccenca.com/shui/queryText" } ,
+        "dt": { "type": "uri" , "value": "http://www.w3.org/2001/XMLSchema#string" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "13" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "https://vocab.eccenca.com/shui/SparqlOperation" } ,
+        "p": { "type": "uri" , "value": "https://vocab.eccenca.com/shui/queryType" } ,
+        "dt": { "type": "uri" , "value": "http://www.w3.org/2001/XMLSchema#string" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "12" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "https://vocab.eccenca.com/shui/ChartVisualization" } ,
+        "p": { "type": "uri" , "value": "http://www.w3.org/2000/01/rdf-schema#label" } ,
+        "dt": { "type": "uri" , "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "https://vocab.eccenca.com/shui/ChartVisualization" } ,
+        "p": { "type": "uri" , "value": "https://vocab.eccenca.com/shui/chartDatasetQuery" } ,
+        "oc": { "type": "uri" , "value": "https://vocab.eccenca.com/shui/SparqlQuery" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "https://vocab.eccenca.com/shui/ChartVisualization" } ,
+        "p": { "type": "uri" , "value": "https://vocab.eccenca.com/shui/chartDatasetQuery" } ,
+        "oc": { "type": "uri" , "value": "https://vocab.eccenca.com/shui/SparqlOperation" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "https://vocab.eccenca.com/shui/ChartVisualization" } ,
+        "p": { "type": "uri" , "value": "https://vocab.eccenca.com/shui/chartOptions" } ,
+        "dt": { "type": "uri" , "value": "http://www.w3.org/2001/XMLSchema#string" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "https://vocab.eccenca.com/shui/ChartVisualization" } ,
+        "p": { "type": "uri" , "value": "https://vocab.eccenca.com/shui/chartDatasetOptions" } ,
+        "dt": { "type": "uri" , "value": "http://www.w3.org/2001/XMLSchema#string" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "https://vocab.eccenca.com/shui/ChartVisualization" } ,
+        "p": { "type": "uri" , "value": "https://vocab.eccenca.com/shui/chartType" } ,
+        "dt": { "type": "uri" , "value": "http://www.w3.org/2001/XMLSchema#string" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "https://vocab.eccenca.com/shui/ChartVisualization" } ,
+        "p": { "type": "uri" , "value": "https://vocab.eccenca.com/shui/chartFormType" } ,
+        "dt": { "type": "uri" , "value": "http://www.w3.org/2001/XMLSchema#string" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "https://vocab.eccenca.com/shui/Visualization" } ,
+        "p": { "type": "uri" , "value": "http://www.w3.org/2000/01/rdf-schema#comment" } ,
+        "dt": { "type": "uri" , "value": "http://www.w3.org/2001/XMLSchema#string" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "https://vocab.eccenca.com/shui/Visualization" } ,
+        "p": { "type": "uri" , "value": "http://www.w3.org/2000/01/rdf-schema#label" } ,
+        "dt": { "type": "uri" , "value": "http://www.w3.org/2001/XMLSchema#string" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "https://vocab.eccenca.com/shui/Visualization" } ,
+        "p": { "type": "uri" , "value": "http://purl.org/dc/terms/created" } ,
+        "dt": { "type": "uri" , "value": "http://www.w3.org/2001/XMLSchema#dateTime" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "https://vocab.eccenca.com/shui/Visualization" } ,
+        "p": { "type": "uri" , "value": "http://purl.org/dc/terms/modified" } ,
+        "dt": { "type": "uri" , "value": "http://www.w3.org/2001/XMLSchema#dateTime" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "https://vocab.eccenca.com/shui/Visualization" } ,
+        "p": { "type": "uri" , "value": "http://purl.org/dc/terms/creator" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "https://vocab.eccenca.com/shui/Visualization" } ,
+        "p": { "type": "uri" , "value": "http://purl.org/dc/terms/contributor" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "https://vocab.eccenca.com/shui/Visualization" } ,
+        "p": { "type": "uri" , "value": "https://vocab.eccenca.com/shui/hasVizNodePlacement" } ,
+        "oc": { "type": "uri" , "value": "https://vocab.eccenca.com/shui/VizNodePlacement" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "43" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "https://vocab.eccenca.com/shui/Visualization" } ,
+        "p": { "type": "uri" , "value": "https://vocab.eccenca.com/shui/hasContextGraph" } ,
+        "oc": { "type": "uri" , "value": "http://www.w3.org/2002/07/owl#Ontology" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "https://vocab.eccenca.com/shui/SelectQueryEndpoint" } ,
+        "p": { "type": "uri" , "value": "http://www.w3.org/2000/01/rdf-schema#label" } ,
+        "dt": { "type": "uri" , "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "3" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "https://vocab.eccenca.com/shui/SelectQueryEndpoint" } ,
+        "p": { "type": "uri" , "value": "https://vocab.eccenca.com/shui/endpointQuery" } ,
+        "oc": { "type": "uri" , "value": "https://vocab.eccenca.com/shui/SparqlQuery" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "3" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "https://vocab.eccenca.com/shui/SelectQueryEndpoint" } ,
+        "p": { "type": "uri" , "value": "https://vocab.eccenca.com/shui/endpointQuery" } ,
+        "oc": { "type": "uri" , "value": "https://vocab.eccenca.com/shui/SparqlOperation" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "3" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "https://vocab.eccenca.com/shui/SelectQueryEndpoint" } ,
+        "p": { "type": "uri" , "value": "https://vocab.eccenca.com/shui/endpointUrlSlug" } ,
+        "dt": { "type": "uri" , "value": "http://www.w3.org/2001/XMLSchema#string" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "3" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "https://vocab.eccenca.com/shui/SelectQueryEndpoint" } ,
+        "p": { "type": "uri" , "value": "https://vocab.eccenca.com/shui/endpointIsStreaming" } ,
+        "dt": { "type": "uri" , "value": "http://www.w3.org/2001/XMLSchema#boolean" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "3" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "https://vocab.eccenca.com/shui/SelectQueryEndpoint" } ,
+        "p": { "type": "uri" , "value": "https://vocab.eccenca.com/shui/endpointTemplate" } ,
+        "oc": { "type": "uri" , "value": "https://vocab.eccenca.com/shui/SelectResultTemplate" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "3" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "https://vocab.eccenca.com/shui/SelectResultTemplate" } ,
+        "p": { "type": "uri" , "value": "http://www.w3.org/2000/01/rdf-schema#label" } ,
+        "dt": { "type": "uri" , "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "3" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "https://vocab.eccenca.com/shui/SelectResultTemplate" } ,
+        "p": { "type": "uri" , "value": "https://vocab.eccenca.com/shui/selectResultTemplateBody" } ,
+        "dt": { "type": "uri" , "value": "https://vocab.eccenca.com/shui/jinja" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "3" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "https://vocab.eccenca.com/shui/VizNodePlacement" } ,
+        "p": { "type": "uri" , "value": "https://vocab.eccenca.com/shui/hasXPosition" } ,
+        "dt": { "type": "uri" , "value": "http://www.w3.org/2001/XMLSchema#int" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "43" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "https://vocab.eccenca.com/shui/VizNodePlacement" } ,
+        "p": { "type": "uri" , "value": "https://vocab.eccenca.com/shui/hasYPosition" } ,
+        "dt": { "type": "uri" , "value": "http://www.w3.org/2001/XMLSchema#int" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "43" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "https://vocab.eccenca.com/shui/VizNodePlacement" } ,
+        "p": { "type": "uri" , "value": "https://vocab.eccenca.com/shui/hasLocatedResource" } ,
+        "oc": { "type": "uri" , "value": "http://www.w3.org/2002/07/owl#ObjectProperty" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "14" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "https://vocab.eccenca.com/shui/VizNodePlacement" } ,
+        "p": { "type": "uri" , "value": "https://vocab.eccenca.com/shui/hasLocatedResource" } ,
+        "oc": { "type": "uri" , "value": "http://www.w3.org/2002/07/owl#Class" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "14" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "https://vocab.eccenca.com/shui/VizNodePlacement" } ,
+        "p": { "type": "uri" , "value": "https://vocab.eccenca.com/shui/hasLocatedResource" } ,
+        "oc": { "type": "uri" , "value": "http://www.w3.org/2002/07/owl#DatatypeProperty" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "15" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/Hardware" } ,
+        "p": { "type": "uri" , "value": "http://www.w3.org/2000/01/rdf-schema#label" } ,
+        "dt": { "type": "uri" , "value": "http://www.w3.org/2001/XMLSchema#string" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1000" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/Hardware" } ,
+        "p": { "type": "uri" , "value": "http://www.w3.org/ns/prov#wasDerivedFrom" } ,
+        "oc": { "type": "uri" , "value": "http://www.w3.org/ns/prov#Entity" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1000" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/Hardware" } ,
+        "p": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/hasCategory" } ,
+        "oc": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/ProductCategory" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "2338" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/Hardware" } ,
+        "p": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/compatibleProduct" } ,
+        "oc": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/Hardware" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1938" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/Hardware" } ,
+        "p": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/name" } ,
+        "dt": { "type": "uri" , "value": "http://www.w3.org/2001/XMLSchema#string" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1000" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/Hardware" } ,
+        "p": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/width_mm" } ,
+        "dt": { "type": "uri" , "value": "http://www.w3.org/2001/XMLSchema#integer" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1000" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/Hardware" } ,
+        "p": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/id" } ,
+        "dt": { "type": "uri" , "value": "http://www.w3.org/2001/XMLSchema#string" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1000" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/Hardware" } ,
+        "p": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/height_mm" } ,
+        "dt": { "type": "uri" , "value": "http://www.w3.org/2001/XMLSchema#integer" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1000" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/Hardware" } ,
+        "p": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/depth_mm" } ,
+        "dt": { "type": "uri" , "value": "http://www.w3.org/2001/XMLSchema#integer" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1000" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/Hardware" } ,
+        "p": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/reliabilityIndex" } ,
+        "dt": { "type": "uri" , "value": "http://www.w3.org/2001/XMLSchema#decimal" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "992" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/Hardware" } ,
+        "p": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/hasSupplier" } ,
+        "oc": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/Supplier" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1000" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/Hardware" } ,
+        "p": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/hasProductManager" } ,
+        "oc": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/Employee" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "852" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/Hardware" } ,
+        "p": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/price" } ,
+        "oc": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/Price" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1000" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/Hardware" } ,
+        "p": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/weight_g" } ,
+        "dt": { "type": "uri" , "value": "http://www.w3.org/2001/XMLSchema#integer" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "1000" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/Hardware" } ,
+        "p": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/hasProductManager" } ,
+        "oc": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/Manager" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "100" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/Hardware" } ,
+        "p": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/hasProductManager" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "48" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/Supplier" } ,
+        "p": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/country" } ,
+        "oc": { "type": "uri" , "value": "http://dbpedia.org/ontology/Country" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "250" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/Supplier" } ,
+        "p": { "type": "uri" , "value": "http://www.w3.org/2003/01/geo/wgs84_pos#lat" } ,
+        "dt": { "type": "uri" , "value": "http://www.w3.org/2001/XMLSchema#string" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "247" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/Supplier" } ,
+        "p": { "type": "uri" , "value": "http://www.w3.org/2003/01/geo/wgs84_pos#long" } ,
+        "dt": { "type": "uri" , "value": "http://www.w3.org/2001/XMLSchema#string" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "247" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/Supplier" } ,
+        "p": { "type": "uri" , "value": "http://www.w3.org/2000/01/rdf-schema#label" } ,
+        "dt": { "type": "uri" , "value": "http://www.w3.org/2001/XMLSchema#string" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "250" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/Supplier" } ,
+        "p": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/name" } ,
+        "dt": { "type": "uri" , "value": "http://www.w3.org/2001/XMLSchema#string" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "250" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/Supplier" } ,
+        "p": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/id" } ,
+        "dt": { "type": "uri" , "value": "http://www.w3.org/2001/XMLSchema#string" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "250" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/Supplier" } ,
+        "p": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/addressCountryCode" } ,
+        "dt": { "type": "uri" , "value": "http://www.w3.org/2001/XMLSchema#string" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "250" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/Supplier" } ,
+        "p": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/addressCountry" } ,
+        "dt": { "type": "uri" , "value": "http://www.w3.org/2001/XMLSchema#string" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "250" }
+      } ,
+      { 
+        "c": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/Supplier" } ,
+        "p": { "type": "uri" , "value": "http://ld.company.org/prod-vocab/addressLocality" } ,
+        "dt": { "type": "uri" , "value": "http://www.w3.org/2001/XMLSchema#string" } ,
+        "n": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "250" }
+      }
+    ]
+  }
+}
+

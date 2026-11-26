@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Search</title>
+  <!-- Sparnatural service, build dbb4564-dirty -->
+  <link rel="stylesheet" href="vendor/yasgui/yasgui.min.css?v=dbb4564-dirty">
+  <link rel="stylesheet" href="vendor/fontawesome/css/all.min.css?v=dbb4564-dirty">
+  <link rel="stylesheet" href="vendor/sparnatural/sparnatural.css?v=dbb4564-dirty">
+  <link rel="stylesheet" href="sparnatural-theme-cmem.css?v=dbb4564-dirty">
+</head>
+<body>
+  <header class="cmem-sn-header">
+    <span id="graph-area"></span>
+    <span id="mode-area"></span>
+    <span class="cmem-sn-spacer"></span>
+    <span id="status" class="cmem-sn-status" role="status" aria-live="polite"></span>
+    <button type="button" id="rebuild" title="Read the graph again and rebuild the query builder">Rebuild</button>
+  </header>
+  <div id="message" hidden></div>
+  <main class="cmem-sn-main" id="builder"></main>
+  <div id="yasqe" hidden></div>
+  <div id="yasr"></div>
+
+  <script src="vendor/yasgui/yasgui.min.js?v=dbb4564-dirty"></script>
+  <script src="vendor/sparnatural/sparnatural.js?v=dbb4564-dirty"></script>
+  <script src="vendor/sparnatural-yasgui-plugins/sparnatural-yasgui-plugins.js?v=dbb4564-dirty"></script>
+  <script src="lib/sparql.js?v=dbb4564-dirty"></script>
+  <script src="lib/links.js?v=dbb4564-dirty"></script>
+  <script src="lib/params.js?v=dbb4564-dirty"></script>
+  <script src="lib/stats.js?v=dbb4564-dirty"></script>
+  <script src="lib/shapes.js?v=dbb4564-dirty"></script>
+  <script src="lib/config.js?v=dbb4564-dirty"></script>
+  <script src="lib/cache.js?v=dbb4564-dirty"></script>
+  <script src="lib/graphs.js?v=dbb4564-dirty"></script>
+  <script src="lib/mapquery.js?v=dbb4564-dirty"></script>
+  <script src="lib/theme.js?v=dbb4564-dirty"></script>
+  <script src="sparnatural-app.js?v=dbb4564-dirty"></script>
+</body>
+</html>

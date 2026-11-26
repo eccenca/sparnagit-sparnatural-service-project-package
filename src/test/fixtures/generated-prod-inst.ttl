@@ -1,0 +1,433 @@
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dash: <http://datashapes.org/dash#> .
+@prefix core: <http://data.sparna.fr/ontologies/sparnatural-config-core#> .
+@prefix volipi: <http://data.sparna.fr/ontologies/volipi#> .
+
+<https://ns.eccenca.com/sparnatural/config/Price> a sh:NodeShape ;
+  sh:targetClass <http://ld.company.org/prod-vocab/Price> ;
+  rdfs:label "(Hardware) Price"@en ;
+  sh:order 1 ;
+  volipi:iconName "fa-solid fa-circle" ;
+  sh:property <https://ns.eccenca.com/sparnatural/config/Price_p1>, <https://ns.eccenca.com/sparnatural/config/Price_p2>, <https://ns.eccenca.com/sparnatural/config/Price_p3>, <https://ns.eccenca.com/sparnatural/config/Price_p4> .
+
+<https://ns.eccenca.com/sparnatural/config/Price_p1> sh:path <http://ld.company.org/prod-vocab/amount> ;
+  sh:name "amount"@en ;
+  sh:order 1 ;
+  sh:nodeKind sh:Literal ;
+  sh:datatype <http://www.w3.org/2001/XMLSchema#double> ;
+  dash:searchWidget core:NumberProperty .
+
+<https://ns.eccenca.com/sparnatural/config/Price_p2> sh:path <http://ld.company.org/prod-vocab/currency> ;
+  sh:name "currency"@en ;
+  sh:order 2 ;
+  sh:nodeKind sh:Literal ;
+  sh:datatype <http://www.w3.org/2001/XMLSchema#string> ;
+  dash:searchWidget core:SearchProperty .
+
+<https://ns.eccenca.com/sparnatural/config/Price_p3> sh:path [ sh:inversePath <http://ld.company.org/prod-vocab/price> ] ;
+  sh:name "⬅ price of"@en ;
+  sh:order 3 ;
+  sh:nodeKind sh:IRI ;
+  sh:class <http://ld.company.org/prod-vocab/Hardware> ;
+  dash:searchWidget core:AutocompleteProperty .
+
+<https://ns.eccenca.com/sparnatural/config/Price_p4> sh:path <http://www.w3.org/2000/01/rdf-schema#label> ;
+  sh:name "label"@en ;
+  sh:order 9999 ;
+  sh:nodeKind sh:Literal ;
+  sh:datatype <http://www.w3.org/2001/XMLSchema#string> ;
+  dash:propertyRole dash:LabelRole .
+
+<https://ns.eccenca.com/sparnatural/config/Hardware> a sh:NodeShape ;
+  sh:targetClass <http://ld.company.org/prod-vocab/Hardware> ;
+  rdfs:label "Hardware"@en ;
+  sh:order 2 ;
+  volipi:iconName "fa-solid fa-circle" ;
+  sh:property <https://ns.eccenca.com/sparnatural/config/Hardware_p1>, <https://ns.eccenca.com/sparnatural/config/Hardware_p2>, <https://ns.eccenca.com/sparnatural/config/Hardware_p3>, <https://ns.eccenca.com/sparnatural/config/Hardware_p4>, <https://ns.eccenca.com/sparnatural/config/Hardware_p5>, <https://ns.eccenca.com/sparnatural/config/Hardware_p6>, <https://ns.eccenca.com/sparnatural/config/Hardware_p7>, <https://ns.eccenca.com/sparnatural/config/Hardware_p8>, <https://ns.eccenca.com/sparnatural/config/Hardware_p9> .
+
+<https://ns.eccenca.com/sparnatural/config/Hardware_p1> sh:path <http://ld.company.org/prod-vocab/id> ;
+  sh:name "ID"@en ;
+  sh:order 1 ;
+  sh:nodeKind sh:Literal ;
+  sh:datatype <http://www.w3.org/2001/XMLSchema#string> ;
+  dash:searchWidget core:SearchProperty .
+
+<https://ns.eccenca.com/sparnatural/config/Hardware_p2> sh:path <http://www.w3.org/2000/01/rdf-schema#label> ;
+  sh:name "Name"@en ;
+  sh:order 2 ;
+  sh:nodeKind sh:Literal ;
+  sh:datatype <http://www.w3.org/2001/XMLSchema#string> ;
+  dash:searchWidget core:SearchProperty ;
+  dash:propertyRole dash:LabelRole .
+
+<https://ns.eccenca.com/sparnatural/config/Hardware_p3> sh:path <http://ld.company.org/prod-vocab/price> ;
+  sh:name "price"@en ;
+  sh:order 3 ;
+  sh:nodeKind sh:IRI ;
+  sh:class <http://ld.company.org/prod-vocab/Price> ;
+  dash:searchWidget core:AutocompleteProperty .
+
+<https://ns.eccenca.com/sparnatural/config/Hardware_p4> sh:path [ sh:inversePath <http://ld.company.org/prod-vocab/eligibleFor> ] ;
+  sh:name "⬅ eligible for Service"@en ;
+  sh:order 4 ;
+  sh:nodeKind sh:IRI ;
+  sh:class <http://ld.company.org/prod-vocab/Service> ;
+  dash:searchWidget core:ListProperty .
+
+<https://ns.eccenca.com/sparnatural/config/Hardware_p5> sh:path [ sh:inversePath <http://ld.company.org/prod-vocab/responsibleFor> ] ;
+  sh:name "⬅ responsible department"@en ;
+  sh:order 6 ;
+  sh:nodeKind sh:IRI ;
+  sh:class <http://ld.company.org/prod-vocab/Department> ;
+  dash:searchWidget core:ListProperty .
+
+<https://ns.eccenca.com/sparnatural/config/Hardware_p6> sh:path <http://ld.company.org/prod-vocab/hasCategory> ;
+  sh:name "category"@en ;
+  sh:order 7 ;
+  sh:nodeKind sh:IRI ;
+  sh:class <http://ld.company.org/prod-vocab/ProductCategory> ;
+  dash:searchWidget core:ListProperty .
+
+<https://ns.eccenca.com/sparnatural/config/Hardware_p7> sh:path <http://ld.company.org/prod-vocab/hasSupplier> ;
+  sh:name "supplier"@en ;
+  sh:order 8 ;
+  sh:nodeKind sh:IRI ;
+  sh:class <http://ld.company.org/prod-vocab/Supplier> ;
+  dash:searchWidget core:AutocompleteProperty .
+
+<https://ns.eccenca.com/sparnatural/config/Hardware_p8> sh:path <http://ld.company.org/prod-vocab/compatibleProduct> ;
+  sh:name "compatible product"@en ;
+  sh:order 9 ;
+  sh:nodeKind sh:IRI ;
+  sh:class <http://ld.company.org/prod-vocab/Hardware> ;
+  dash:searchWidget core:AutocompleteProperty .
+
+<https://ns.eccenca.com/sparnatural/config/Hardware_p9> sh:path [ sh:inversePath <http://ld.company.org/prod-vocab/hasPart> ] ;
+  sh:name "⬅ Part of "@en ;
+  sh:order 1000 ;
+  sh:nodeKind sh:IRI ;
+  sh:class <http://ld.company.org/prod-vocab/BomPart> ;
+  dash:searchWidget core:AutocompleteProperty .
+
+<https://ns.eccenca.com/sparnatural/config/Supplier> a sh:NodeShape ;
+  sh:targetClass <http://ld.company.org/prod-vocab/Supplier> ;
+  rdfs:label "Supplier"@en ;
+  sh:order 3 ;
+  volipi:iconName "fa-solid fa-circle" ;
+  sh:property <https://ns.eccenca.com/sparnatural/config/Supplier_p1>, <https://ns.eccenca.com/sparnatural/config/Supplier_p2>, <https://ns.eccenca.com/sparnatural/config/Supplier_p3>, <https://ns.eccenca.com/sparnatural/config/Supplier_p4>, <https://ns.eccenca.com/sparnatural/config/Supplier_p5>, <https://ns.eccenca.com/sparnatural/config/Supplier_p6>, <https://ns.eccenca.com/sparnatural/config/Supplier_p7>, <https://ns.eccenca.com/sparnatural/config/Supplier_p8> .
+
+<https://ns.eccenca.com/sparnatural/config/Supplier_p1> sh:path <http://ld.company.org/prod-vocab/id> ;
+  sh:name "ID"@en ;
+  sh:order 1 ;
+  sh:nodeKind sh:Literal ;
+  sh:datatype <http://www.w3.org/2001/XMLSchema#string> ;
+  dash:searchWidget core:SearchProperty .
+
+<https://ns.eccenca.com/sparnatural/config/Supplier_p2> sh:path <http://www.w3.org/2000/01/rdf-schema#label> ;
+  sh:name "label"@en ;
+  sh:order 2 ;
+  sh:nodeKind sh:Literal ;
+  sh:datatype <http://www.w3.org/2001/XMLSchema#string> ;
+  dash:searchWidget core:SearchProperty ;
+  dash:propertyRole dash:LabelRole .
+
+<https://ns.eccenca.com/sparnatural/config/Supplier_p3> sh:path [ sh:inversePath <http://ld.company.org/prod-vocab/hasSupplier> ] ;
+  sh:name "⬅ supplier of"@en ;
+  sh:order 3 ;
+  sh:nodeKind sh:IRI ;
+  sh:class <http://ld.company.org/prod-vocab/Hardware> ;
+  dash:searchWidget core:AutocompleteProperty .
+
+<https://ns.eccenca.com/sparnatural/config/Supplier_p4> sh:path <http://ld.company.org/prod-vocab/name> ;
+  sh:name "name"@en ;
+  sh:order 3 ;
+  sh:nodeKind sh:Literal ;
+  sh:datatype <http://www.w3.org/2001/XMLSchema#string> ;
+  dash:searchWidget core:SearchProperty .
+
+<https://ns.eccenca.com/sparnatural/config/Supplier_p5> sh:path <http://ld.company.org/prod-vocab/addressLocality> ;
+  sh:name "locality (city)"@en ;
+  sh:order 4 ;
+  sh:nodeKind sh:Literal ;
+  sh:datatype <http://www.w3.org/2001/XMLSchema#string> ;
+  dash:searchWidget core:SearchProperty .
+
+<https://ns.eccenca.com/sparnatural/config/Supplier_p6> sh:path <http://ld.company.org/prod-vocab/country> ;
+  sh:name "country (res)"@en ;
+  sh:order 5 ;
+  sh:nodeKind sh:IRI ;
+  sh:class <http://dbpedia.org/ontology/Country> ;
+  dash:searchWidget core:AutocompleteProperty .
+
+<https://ns.eccenca.com/sparnatural/config/Supplier_p7> sh:path <http://ld.company.org/prod-vocab/addressCountry> ;
+  sh:name "country (str)"@en ;
+  sh:order 5 ;
+  sh:nodeKind sh:Literal ;
+  sh:datatype <http://www.w3.org/2001/XMLSchema#string> ;
+  dash:searchWidget core:SearchProperty .
+
+<https://ns.eccenca.com/sparnatural/config/Supplier_p8> sh:path <http://ld.company.org/prod-vocab/addressCountryCode> ;
+  sh:name "country code"@en ;
+  sh:order 6 ;
+  sh:nodeKind sh:Literal ;
+  sh:datatype <http://www.w3.org/2001/XMLSchema#string> ;
+  dash:searchWidget core:SearchProperty .
+
+<https://ns.eccenca.com/sparnatural/config/Country> a sh:NodeShape ;
+  sh:targetClass <http://dbpedia.org/ontology/Country> ;
+  rdfs:label "Country"@en ;
+  sh:order 4 ;
+  volipi:iconName "fa-solid fa-circle" ;
+  sh:property <https://ns.eccenca.com/sparnatural/config/Country_p1>, <https://ns.eccenca.com/sparnatural/config/Country_p2> .
+
+<https://ns.eccenca.com/sparnatural/config/Country_p1> sh:path [ sh:inversePath <http://ld.company.org/prod-vocab/country> ] ;
+  sh:name "⬅ country of"@en ;
+  sh:order 100 ;
+  sh:nodeKind sh:IRI ;
+  sh:class <http://ld.company.org/prod-vocab/Supplier> ;
+  dash:searchWidget core:AutocompleteProperty .
+
+<https://ns.eccenca.com/sparnatural/config/Country_p2> sh:path <http://www.w3.org/2000/01/rdf-schema#label> ;
+  sh:name "label"@en ;
+  sh:order 9999 ;
+  sh:nodeKind sh:Literal ;
+  sh:datatype <http://www.w3.org/1999/02/22-rdf-syntax-ns#langString> ;
+  dash:propertyRole dash:LabelRole .
+
+<https://ns.eccenca.com/sparnatural/config/BomPart> a sh:NodeShape ;
+  sh:targetClass <http://ld.company.org/prod-vocab/BomPart> ;
+  rdfs:label "BOM Part"@en ;
+  sh:order 5 ;
+  volipi:iconName "fa-solid fa-circle" ;
+  sh:property <https://ns.eccenca.com/sparnatural/config/BomPart_p1>, <https://ns.eccenca.com/sparnatural/config/BomPart_p2>, <https://ns.eccenca.com/sparnatural/config/BomPart_p3> .
+
+<https://ns.eccenca.com/sparnatural/config/BomPart_p1> sh:path <http://www.w3.org/2000/01/rdf-schema#label> ;
+  sh:name "Name"@en ;
+  sh:order 2 ;
+  sh:nodeKind sh:Literal ;
+  sh:datatype <http://www.w3.org/2001/XMLSchema#string> ;
+  dash:searchWidget core:SearchProperty ;
+  dash:propertyRole dash:LabelRole .
+
+<https://ns.eccenca.com/sparnatural/config/BomPart_p2> sh:path [ sh:inversePath <http://ld.company.org/prod-vocab/hasBomPart> ] ;
+  sh:name "⬅ BOM part of"@en ;
+  sh:order 1001 ;
+  sh:nodeKind sh:IRI ;
+  sh:class <http://ld.company.org/prod-vocab/BillOfMaterial> ;
+  dash:searchWidget core:ListProperty .
+
+<https://ns.eccenca.com/sparnatural/config/BomPart_p3> sh:path <http://ld.company.org/prod-vocab/hasPart> ;
+  sh:name "has BOM part"@en ;
+  sh:order 1002 ;
+  sh:nodeKind sh:IRI ;
+  sh:class <http://ld.company.org/prod-vocab/Hardware> ;
+  dash:searchWidget core:AutocompleteProperty .
+
+<https://ns.eccenca.com/sparnatural/config/Employee> a sh:NodeShape ;
+  sh:targetClass <http://ld.company.org/prod-vocab/Employee> ;
+  rdfs:label "Employee"@en ;
+  sh:order 6 ;
+  volipi:iconName "fa-solid fa-circle" ;
+  sh:property <https://ns.eccenca.com/sparnatural/config/Employee_p1>, <https://ns.eccenca.com/sparnatural/config/Employee_p2>, <https://ns.eccenca.com/sparnatural/config/Employee_p3>, <https://ns.eccenca.com/sparnatural/config/Employee_p4>, <https://ns.eccenca.com/sparnatural/config/Employee_p5>, <https://ns.eccenca.com/sparnatural/config/Employee_p6> .
+
+<https://ns.eccenca.com/sparnatural/config/Employee_p1> sh:path <http://ld.company.org/prod-vocab/name> ;
+  sh:name "name"@en ;
+  sh:order 1 ;
+  sh:nodeKind sh:Literal ;
+  sh:datatype <http://www.w3.org/2001/XMLSchema#string> ;
+  dash:searchWidget core:SearchProperty .
+
+<https://ns.eccenca.com/sparnatural/config/Employee_p2> sh:path <http://ld.company.org/prod-vocab/email> ;
+  sh:name "e-mail"@en ;
+  sh:order 2 ;
+  sh:nodeKind sh:Literal ;
+  sh:datatype <http://www.w3.org/2001/XMLSchema#string> ;
+  dash:searchWidget core:SearchProperty .
+
+<https://ns.eccenca.com/sparnatural/config/Employee_p3> sh:path <http://ld.company.org/prod-vocab/memberOf> ;
+  sh:name "department"@en ;
+  sh:order 3 ;
+  sh:nodeKind sh:IRI ;
+  sh:class <http://ld.company.org/prod-vocab/Department> ;
+  dash:searchWidget core:ListProperty .
+
+<https://ns.eccenca.com/sparnatural/config/Employee_p4> sh:path <http://ld.company.org/prod-vocab/phone> ;
+  sh:name "phone"@en ;
+  sh:order 4 ;
+  sh:nodeKind sh:Literal ;
+  sh:datatype <http://www.w3.org/2001/XMLSchema#string> ;
+  dash:searchWidget core:SearchProperty .
+
+<https://ns.eccenca.com/sparnatural/config/Employee_p5> sh:path <http://ld.company.org/prod-vocab/addressText> ;
+  sh:name "address"@en ;
+  sh:order 5 ;
+  sh:nodeKind sh:Literal ;
+  sh:datatype <http://www.w3.org/2001/XMLSchema#string> ;
+  dash:searchWidget core:SearchProperty .
+
+<https://ns.eccenca.com/sparnatural/config/Employee_p6> sh:path <http://www.w3.org/2000/01/rdf-schema#label> ;
+  sh:name "label"@en ;
+  sh:order 9999 ;
+  sh:nodeKind sh:Literal ;
+  sh:datatype <http://www.w3.org/2001/XMLSchema#string> ;
+  dash:propertyRole dash:LabelRole .
+
+<https://ns.eccenca.com/sparnatural/config/ProductCategory> a sh:NodeShape ;
+  sh:targetClass <http://ld.company.org/prod-vocab/ProductCategory> ;
+  rdfs:label "Product Category"@en ;
+  sh:order 7 ;
+  volipi:iconName "fa-solid fa-circle" ;
+  sh:property <https://ns.eccenca.com/sparnatural/config/ProductCategory_p1>, <https://ns.eccenca.com/sparnatural/config/ProductCategory_p2> .
+
+<https://ns.eccenca.com/sparnatural/config/ProductCategory_p1> sh:path <http://www.w3.org/2000/01/rdf-schema#label> ;
+  sh:name "label"@en ;
+  sh:order 1 ;
+  sh:nodeKind sh:Literal ;
+  sh:datatype <http://www.w3.org/2001/XMLSchema#string> ;
+  dash:searchWidget core:SearchProperty ;
+  dash:propertyRole dash:LabelRole .
+
+<https://ns.eccenca.com/sparnatural/config/ProductCategory_p2> sh:path [ sh:inversePath <http://ld.company.org/prod-vocab/hasCategory> ] ;
+  sh:name "⬅ products in category"@en ;
+  sh:order 2 ;
+  sh:nodeKind sh:IRI ;
+  sh:or ( [ sh:class <http://ld.company.org/prod-vocab/Hardware> ] [ sh:class <http://ld.company.org/prod-vocab/Service> ] ) ;
+  dash:searchWidget core:AutocompleteProperty .
+
+<https://ns.eccenca.com/sparnatural/config/BillOfMaterial> a sh:NodeShape ;
+  sh:targetClass <http://ld.company.org/prod-vocab/BillOfMaterial> ;
+  rdfs:label "Bill of Material (BOM)"@en ;
+  sh:order 8 ;
+  volipi:iconName "fa-solid fa-circle" ;
+  sh:property <https://ns.eccenca.com/sparnatural/config/BillOfMaterial_p1>, <https://ns.eccenca.com/sparnatural/config/BillOfMaterial_p2> .
+
+<https://ns.eccenca.com/sparnatural/config/BillOfMaterial_p1> sh:path <http://www.w3.org/2000/01/rdf-schema#label> ;
+  sh:name "Name"@en ;
+  sh:order 2 ;
+  sh:nodeKind sh:Literal ;
+  sh:datatype <http://www.w3.org/2001/XMLSchema#string> ;
+  dash:searchWidget core:SearchProperty ;
+  dash:propertyRole dash:LabelRole .
+
+<https://ns.eccenca.com/sparnatural/config/BillOfMaterial_p2> sh:path <http://ld.company.org/prod-vocab/hasBomPart> ;
+  sh:name "BOM part of"@en ;
+  sh:order 1000 ;
+  sh:nodeKind sh:IRI ;
+  sh:class <http://ld.company.org/prod-vocab/BomPart> ;
+  dash:searchWidget core:AutocompleteProperty .
+
+<https://ns.eccenca.com/sparnatural/config/Service> a sh:NodeShape ;
+  sh:targetClass <http://ld.company.org/prod-vocab/Service> ;
+  rdfs:label "Service"@en ;
+  sh:order 9 ;
+  volipi:iconName "fa-solid fa-circle" ;
+  sh:property <https://ns.eccenca.com/sparnatural/config/Service_p1>, <https://ns.eccenca.com/sparnatural/config/Service_p2>, <https://ns.eccenca.com/sparnatural/config/Service_p3>, <https://ns.eccenca.com/sparnatural/config/Service_p4>, <https://ns.eccenca.com/sparnatural/config/Service_p5>, <https://ns.eccenca.com/sparnatural/config/Service_p6> .
+
+<https://ns.eccenca.com/sparnatural/config/Service_p1> sh:path <http://ld.company.org/prod-vocab/id> ;
+  sh:name "ID"@en ;
+  sh:order 1 ;
+  sh:nodeKind sh:Literal ;
+  sh:datatype <http://www.w3.org/2001/XMLSchema#string> ;
+  dash:searchWidget core:SearchProperty .
+
+<https://ns.eccenca.com/sparnatural/config/Service_p2> sh:path <http://www.w3.org/2000/01/rdf-schema#label> ;
+  sh:name "Name"@en ;
+  sh:order 2 ;
+  sh:nodeKind sh:Literal ;
+  sh:datatype <http://www.w3.org/2001/XMLSchema#string> ;
+  dash:searchWidget core:SearchProperty ;
+  dash:propertyRole dash:LabelRole .
+
+<https://ns.eccenca.com/sparnatural/config/Service_p3> sh:path <http://ld.company.org/prod-vocab/price> ;
+  sh:name "price"@en ;
+  sh:order 3 ;
+  sh:nodeKind sh:IRI ;
+  sh:class <http://ld.company.org/prod-vocab/Price> ;
+  dash:searchWidget core:AutocompleteProperty .
+
+<https://ns.eccenca.com/sparnatural/config/Service_p4> sh:path <http://ld.company.org/prod-vocab/eligibleFor> ;
+  sh:name "eligible for Hardware"@en ;
+  sh:order 5 ;
+  sh:nodeKind sh:IRI ;
+  sh:class <http://ld.company.org/prod-vocab/Hardware> ;
+  dash:searchWidget core:AutocompleteProperty .
+
+<https://ns.eccenca.com/sparnatural/config/Service_p5> sh:path [ sh:inversePath <http://ld.company.org/prod-vocab/responsibleFor> ] ;
+  sh:name "⬅ responsible department"@en ;
+  sh:order 6 ;
+  sh:nodeKind sh:IRI ;
+  sh:class <http://ld.company.org/prod-vocab/Department> ;
+  dash:searchWidget core:ListProperty .
+
+<https://ns.eccenca.com/sparnatural/config/Service_p6> sh:path <http://ld.company.org/prod-vocab/hasCategory> ;
+  sh:name "category"@en ;
+  sh:order 7 ;
+  sh:nodeKind sh:IRI ;
+  sh:class <http://ld.company.org/prod-vocab/ProductCategory> ;
+  dash:searchWidget core:ListProperty .
+
+<https://ns.eccenca.com/sparnatural/config/Department> a sh:NodeShape ;
+  sh:targetClass <http://ld.company.org/prod-vocab/Department> ;
+  rdfs:label "Department"@en ;
+  sh:order 10 ;
+  volipi:iconName "fa-solid fa-circle" ;
+  sh:property <https://ns.eccenca.com/sparnatural/config/Department_p1>, <https://ns.eccenca.com/sparnatural/config/Department_p2>, <https://ns.eccenca.com/sparnatural/config/Department_p3>, <https://ns.eccenca.com/sparnatural/config/Department_p4>, <https://ns.eccenca.com/sparnatural/config/Department_p5> .
+
+<https://ns.eccenca.com/sparnatural/config/Department_p1> sh:path <http://ld.company.org/prod-vocab/name> ;
+  sh:name "name"@en ;
+  sh:order 1 ;
+  sh:nodeKind sh:Literal ;
+  sh:datatype <http://www.w3.org/2001/XMLSchema#string> ;
+  dash:searchWidget core:SearchProperty .
+
+<https://ns.eccenca.com/sparnatural/config/Department_p2> sh:path <http://ld.company.org/prod-vocab/id> ;
+  sh:name "ID"@en ;
+  sh:order 2 ;
+  sh:nodeKind sh:Literal ;
+  sh:datatype <http://www.w3.org/2001/XMLSchema#string> ;
+  dash:searchWidget core:SearchProperty .
+
+<https://ns.eccenca.com/sparnatural/config/Department_p3> sh:path [ sh:inversePath <http://ld.company.org/prod-vocab/memberOf> ] ;
+  sh:name "⬅ member"@en ;
+  sh:order 3 ;
+  sh:nodeKind sh:IRI ;
+  sh:class <http://ld.company.org/prod-vocab/Employee> ;
+  dash:searchWidget core:ListProperty .
+
+<https://ns.eccenca.com/sparnatural/config/Department_p4> sh:path <http://ld.company.org/prod-vocab/responsibleFor> ;
+  sh:name "responsible for service"@en ;
+  sh:order 4 ;
+  sh:nodeKind sh:IRI ;
+  sh:class <http://ld.company.org/prod-vocab/Service> ;
+  dash:searchWidget core:ListProperty .
+
+<https://ns.eccenca.com/sparnatural/config/Department_p5> sh:path <http://www.w3.org/2000/01/rdf-schema#label> ;
+  sh:name "label"@en ;
+  sh:order 9999 ;
+  sh:nodeKind sh:Literal ;
+  sh:datatype <http://www.w3.org/2001/XMLSchema#string> ;
+  dash:propertyRole dash:LabelRole .
+
+<https://ns.eccenca.com/sparnatural/config/Entity> a sh:NodeShape ;
+  sh:targetClass <http://www.w3.org/ns/prov#Entity> ;
+  rdfs:label "Entity (prov:)"@en ;
+  sh:order 11 ;
+  volipi:iconName "fa-solid fa-circle" ;
+  sh:property <https://ns.eccenca.com/sparnatural/config/Entity_p1>, <https://ns.eccenca.com/sparnatural/config/Entity_p2> .
+
+<https://ns.eccenca.com/sparnatural/config/Entity_p1> sh:path <http://www.w3.org/2000/01/rdf-schema#label> ;
+  sh:name "label (rdfs:)"@en ;
+  sh:order 1000 ;
+  sh:nodeKind sh:Literal ;
+  sh:datatype <http://www.w3.org/2001/XMLSchema#string> ;
+  dash:searchWidget core:SearchProperty ;
+  dash:propertyRole dash:LabelRole .
+
+<https://ns.eccenca.com/sparnatural/config/Entity_p2> sh:path [ sh:inversePath <http://www.w3.org/ns/prov#wasDerivedFrom> ] ;
+  sh:name "← wasDerivedFrom (prov:)"@en ;
+  sh:order 1001 ;
+  sh:nodeKind sh:IRI ;
+  sh:or ( [ sh:class <http://ld.company.org/prod-vocab/Price> ] [ sh:class <http://ld.company.org/prod-vocab/Hardware> ] [ sh:class <http://ld.company.org/prod-vocab/Employee> ] [ sh:class <http://ld.company.org/prod-vocab/ProductCategory> ] [ sh:class <http://ld.company.org/prod-vocab/Service> ] [ sh:class <http://ld.company.org/prod-vocab/Department> ] ) ;
+  dash:searchWidget core:AutocompleteProperty .
