@@ -304,6 +304,7 @@
     if (sparnatural) sparnatural.remove();
     sparnatural = null;
     lastQuery = '';
+    $('result-actions').hidden = true;
   }
 
   function createBuilder(turtle) {
@@ -333,13 +334,15 @@
     el.addEventListener('queryUpdated', (e) => {
       try { lastQuery = el.expandSparql(e.detail.queryString); } catch (err) { lastQuery = e.detail.queryString; }
       if (yasqe) yasqe.setValue(lastQuery);
+      $('open-in-editor').href = CS.links.queryEditorUrl(view, lastQuery, params.graph);
+      $('result-actions').hidden = !lastQuery;
       for (const p in yasr.plugins) {
         if (!yasr.plugins[p].notifyQuery) continue;
         // the Map plugin still reads Sparnatural's older query JSON
         yasr.plugins[p].notifyQuery(p === 'Map' ? CS.mapquery.toV13Query(e.detail.queryJson) : e.detail.queryJson);
       }
     });
-    el.addEventListener('reset', () => { lastQuery = ''; if (yasqe) yasqe.setValue(''); });
+    el.addEventListener('reset', () => { lastQuery = ''; $('result-actions').hidden = true; if (yasqe) yasqe.setValue(''); });
     el.addEventListener('submit', () => runQuery(el));
     $('builder').appendChild(el);
     sparnatural = el;

@@ -6,6 +6,14 @@ If the package contains content from external sources, the release notes of thes
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/) and this project adheres to [Semantic Versioning](https://semver.org/)
 
+## [Unreleased]
+
+### Added
+
+- *Open in query editor* link above the results: opens the generated query (with `FROM <graph>`) in the query module
+- query module enabled in the *Search* application view
+
+
 ## [14.1.0-1] 2026-11-26
 
 First release, based on Sparnatural 14.1.0.

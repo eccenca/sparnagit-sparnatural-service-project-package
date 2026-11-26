@@ -186,6 +186,18 @@ html, body {
 }
 
 /* results */
+.cmem-sn-result-actions { display: flex; justify-content: flex-end; margin: 4px 6px 0; }
+.cmem-sn-result-actions[hidden] { display: none; }
+.cmem-sn-result-actions a {
+  color: var(--eccgui-color-accent, #0a6199);
+  text-decoration: none;
+  padding: 2px 10px;
+  border: 1px solid var(--eccgui-color-palette-identity-accent-500, #77abca);
+  border-radius: 12px;
+  font-size: 13px;
+}
+.cmem-sn-result-actions a:hover { background: var(--eccgui-color-accent-contrast, #e5f4fb); }
+
 #yasqe { margin: 0 14px 14px; }
 #yasr { margin: 0 14px 14px; }
 .yasr a.iri, .yasr a { color: var(--eccgui-color-accent, #0a6199); }

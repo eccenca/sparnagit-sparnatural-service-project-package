@@ -80,3 +80,13 @@ test('safeBindingSet HTML-escapes label bindings (TableX renders labels as HTML)
   assert.equal(b.x.value, 'http://r/1');
   assert.equal(b.x_label.value, '&lt;img src=x onerror=alert(1)&gt; &amp; co');
 });
+
+test('queryEditorUrl: query module of the view, query catalog, query text with FROM for the context graph', () => {
+  const { queryEditorUrl, withFrom } = require('../lib/links.js');
+  const q = 'PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nSELECT DISTINCT ?A WHERE {\n  ?A rdf:type <http://x/A>.\n}\nLIMIT 10';
+  assert.equal(withFrom(q, null), q);
+  assert.equal(withFrom(q, 'http://g/'), 'PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nSELECT DISTINCT ?A\nFROM <http://g/>\nWHERE {\n  ?A rdf:type <http://x/A>.\n}\nLIMIT 10');
+  const url = queryEditorUrl('sparnatural', q, 'http://g/');
+  assert.ok(url.startsWith('/sparnatural/query?graph=https%3A%2F%2Fns.eccenca.com%2Fdata%2Fqueries%2F&queryString='));
+  assert.equal(decodeURIComponent(url.split('queryString=')[1]), withFrom(q, 'http://g/'));
+});

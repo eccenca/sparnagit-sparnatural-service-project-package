@@ -381,8 +381,8 @@
         "id": "link_rule"
       },
       "queryModuleConfiguration": {
-        "order": 10,
-        "enabled": false,
+        "order": 3,
+        "enabled": true,
         "id": "query"
       },
       "reportsModuleConfiguration": {

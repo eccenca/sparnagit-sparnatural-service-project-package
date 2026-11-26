@@ -52,6 +52,19 @@
       .join('');
   }
 
+  const QUERY_CATALOG = 'https://ns.eccenca.com/data/queries/';
+
+  /** Adds FROM <graph> before the first WHERE: our searches are scoped by the endpoint, the query module is not. */
+  function withFrom(query, graph) {
+    if (!graph) return query;
+    return query.replace(/\s*\bWHERE\s*\{/i, (m) => `\nFROM ${sparql.iriRef(graph)}\nWHERE {`);
+  }
+
+  /** Link that opens the query text in the CMEM query module of the given view. */
+  function queryEditorUrl(view, query, graph) {
+    return `/${encodeURIComponent(view)}/query?graph=${encodeURIComponent(QUERY_CATALOG)}&queryString=${encodeURIComponent(withFrom(query, graph))}`;
+  }
+
   /** TableX inserts label bindings (x_label) into HTML without escaping: escape them before it renders. */
   function safeBindingSet(binding) {
     const out = {};
@@ -79,5 +92,5 @@
     }
   }
 
-  return { DEFAULT_LINKS, parseLinks, expandLink, linkIconsHtml, escapeHtml, safeBindingSet, graphOfQuery, resolveGraph };
+  return { DEFAULT_LINKS, parseLinks, expandLink, linkIconsHtml, escapeHtml, safeBindingSet, withFrom, queryEditorUrl, graphOfQuery, resolveGraph };
 });

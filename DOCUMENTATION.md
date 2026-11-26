@@ -15,7 +15,7 @@ of the chosen graph, and from the CMEM shapes wherever they exist.
 The package installs:
 
 - **Application view *Search*** (`sparnatural`): the query builder is the first screen (integrations module first),
-  next to Explore and the Business Knowledge Editor (BKE).
+  next to Explore, the Business Knowledge Editor (BKE) and the query module.
 - **Build project *Sparnatural Service*** (`sparnatural-service`): serves the page
   `/dataintegration/workspace/projects/sparnatural-service/browse/sparnatural.html` and the libraries it needs. No
   server-side component, no Python plugin.
@@ -42,6 +42,12 @@ The package installs:
 
 Everything runs in the browser with the session of the logged-in user, so Corporate Memory's access rules apply to
 the configuration and to every result.
+
+### Open the query in the query editor
+
+Above the results, **Open in query editor ↗** opens the generated SPARQL query in the query module of the current
+application view (new tab). When a graph is selected, the query gets a `FROM <graph>` clause, so it returns the same
+results there. The application view must have the query module enabled (the *Search* view does).
 
 ### Maps
 
